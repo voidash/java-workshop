@@ -2,8 +2,7 @@
 
 ### Instructor: [Ashish Thapa ](https://github.com/voidash)
 
-### Expected Time : 16 hours
-
+### Expected Time : 18 hours/20 hours
 
 
 
