@@ -1,0 +1,287 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>What Project Oriented Approach means - Project Oriented Java</title>
+                
+
+        <!-- Custom HTML head -->
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+                <link rel="icon" href="favicon.svg">
+                        <link rel="shortcut icon" href="favicon.png">
+                <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+                <link rel="stylesheet" href="css/print.css" media="print">
+        
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+                <link rel="stylesheet" href="fonts/fonts.css">
+        
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+            </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="course-structure.html"><strong aria-hidden="true">1.</strong> Course Structure</a></li><li class="chapter-item expanded "><a href="resources.html"><strong aria-hidden="true">2.</strong> Resources</a></li><li class="chapter-item expanded "><a href="why-java.html"><strong aria-hidden="true">3.</strong> Why Java</a></li><li class="chapter-item expanded "><a href="basics-of-basics.html"><strong aria-hidden="true">4.</strong> Basics of Basics</a></li><li class="chapter-item expanded "><a href="oop.html"><strong aria-hidden="true">5.</strong> Object Oriented Programming</a></li><li class="chapter-item expanded "><a href="intro-to-java.html"><strong aria-hidden="true">6.</strong> Introduction To Java</a></li><li class="chapter-item expanded "><a href="installing-java.html"><strong aria-hidden="true">7.</strong> Installing Java</a></li><li class="chapter-item expanded "><a href="setting-up-vscode.html"><strong aria-hidden="true">8.</strong> Setting up Vscode and Extensions</a></li><li class="chapter-item expanded "><a href="cli-hello-world.html"><strong aria-hidden="true">9.</strong> Simple Hello World</a></li><li class="chapter-item expanded "><a href="project-oriented-approach.html" class="active"><strong aria-hidden="true">10.</strong> What Project Oriented Approach means</a></li><li class="chapter-item expanded "><a href="tour-of-java.html"><strong aria-hidden="true">11.</strong> Tour of Java</a></li></ol>            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                                                <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                                            </div>
+
+                    <h1 class="menu-title">Project Oriented Java</h1>
+
+                    <div class="right-buttons">
+                                                <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                                                                        
+                    </div>
+                </div>
+
+                                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="what-project-oriented-approach-means"><a class="header" href="#what-project-oriented-approach-means">What Project Oriented Approach means</a></h1>
+<p>A project-oriented approach to learning is a highly effective method for gaining practical experience and deepening your understanding of programming and software development. By working on projects, you apply theoretical knowledge to real-world problems, which enhances your skills and builds a portfolio that demonstrates your capabilities. Here’s a detailed guide on how to implement this approach:</p>
+<h3 id="1-how-to-select-your-projects"><a class="header" href="#1-how-to-select-your-projects">1. How to Select Your Projects</a></h3>
+<p><strong>Identify Your Interests and Goals:</strong></p>
+<ul>
+<li>Choose projects that align with your interests, whether it’s web development, mobile apps, data science, game development, etc.</li>
+<li>Set clear learning objectives. What do you want to achieve or learn through this project? Examples include learning a new programming language, mastering a framework, or understanding specific algorithms.</li>
+</ul>
+<p><strong>Start Small and Grow:</strong></p>
+<ul>
+<li>Begin with small, manageable projects to build confidence and foundational skills. Examples: To-do list app, simple calculator, personal blog.</li>
+<li>Gradually increase the complexity of your projects as you gain experience. Examples: social media app, machine learning model.</li>
+</ul>
+<p><strong>Real-World Problems:</strong></p>
+<ul>
+<li>Look for problems you or others face in daily life. Projects that solve real problems are more engaging and rewarding.</li>
+<li>Consider projects that have practical applications, such as automating a task, creating a budgeting tool, or developing a fitness tracker.</li>
+</ul>
+<h3 id="2-how-to-research"><a class="header" href="#2-how-to-research">2. How to Research</a></h3>
+<p><strong>Using the Awesome Prefix:</strong></p>
+<ul>
+<li>Use the “awesome” prefix when searching on Google to find curated lists of resources and GitHub repositories. For example, search for “awesome java projects” or “awesome machine learning GitHub” to discover high-quality resources.</li>
+<li>Examples of such searches: “awesome web development GitHub”, “awesome data science projects”.</li>
+</ul>
+<p><strong>Explore Existing Projects:</strong></p>
+<ul>
+<li>Browse GitHub, GitLab, and Bitbucket for open-source projects in your area of interest. Study the code, documentation, and project structure.</li>
+<li>Check out project-based learning platforms like freeCodeCamp, The Odin Project, and Codecademy for structured, hands-on learning experiences.</li>
+</ul>
+<p><strong>Follow Tutorials and Courses:</strong></p>
+<ul>
+<li>Supplement your research with online tutorials, courses, and videos that cover the technologies and skills you need for your project.</li>
+</ul>
+<h3 id="3-how-to-spec-out-what-you-want-to-do"><a class="header" href="#3-how-to-spec-out-what-you-want-to-do">3. How to Spec Out What You Want to Do</a></h3>
+<p><strong>Define the Scope:</strong></p>
+<ul>
+<li>Write a clear and concise project description. What is the purpose of the project? What problem does it solve?</li>
+<li>List the core features and functionalities you want to implement. Prioritize them based on importance and feasibility.</li>
+</ul>
+<p><strong>Create User Stories:</strong></p>
+<ul>
+<li>Describe the project from the perspective of its users. What actions can users perform? What are the expected outcomes?</li>
+<li>Example user stories: “As a user, I want to sign up and log in so that I can access my personalized dashboard.”</li>
+</ul>
+<p><strong>Set Requirements:</strong></p>
+<ul>
+<li>Identify the technical requirements. What technologies, frameworks, and tools will you use?</li>
+<li>Specify any constraints or limitations, such as time, resources, and skill levels.</li>
+</ul>
+<h3 id="4-how-to-set-the-roadmap-for-learning"><a class="header" href="#4-how-to-set-the-roadmap-for-learning">4. How to Set the Roadmap for Learning</a></h3>
+<p><strong>Break Down the Project:</strong></p>
+<ul>
+<li>Divide the project into smaller, manageable tasks. Each task should have a clear goal and deliverable.</li>
+<li>Use project management tools like Trello, Asana, or GitHub Projects to organize and track tasks.</li>
+</ul>
+<p><strong>Identify Knowledge Gaps:</strong></p>
+<ul>
+<li>Determine what skills and knowledge you need to acquire to complete each task.</li>
+<li>Create a learning plan with a timeline. Allocate specific time slots for learning new technologies, practicing coding, and implementing features.</li>
+</ul>
+<p><strong>Set Milestones:</strong></p>
+<ul>
+<li>Establish key milestones to track your progress. Milestones can be major features, project phases, or intermediate deliverables.</li>
+</ul>
+<h3 id="5-how-to-start-outlining-the-project-and-setting-up-tooling"><a class="header" href="#5-how-to-start-outlining-the-project-and-setting-up-tooling">5. How to Start Outlining the Project and Setting Up Tooling</a></h3>
+<p><strong>Project Outline:</strong></p>
+<ul>
+<li>Create a high-level outline of your project, detailing the major components and how they interact.</li>
+<li>Sketch wireframes or diagrams to visualize the project’s structure and user flow.</li>
+</ul>
+<p><strong>Set Up the Development Environment:</strong></p>
+<ul>
+<li>Install and configure the necessary tools, such as IDEs (e.g., IntelliJ IDEA, Visual Studio Code), version control systems (e.g., Git), and package managers (e.g., npm for JavaScript, pip for Python).</li>
+<li>Set up a repository on GitHub, GitLab, or Bitbucket to manage your project’s code and collaborate with others if needed.</li>
+</ul>
+<p><strong>Initialize the Project:</strong></p>
+<ul>
+<li>Create the project’s directory structure and initialize it with the necessary configuration files (e.g., <code>.gitignore</code>, <code>README.md</code>, build scripts).</li>
+<li>Set up the core dependencies and libraries you’ll be using. For example, if you’re building a web app, set up the web framework (e.g., React, Angular) and the backend framework (e.g., Express, Spring Boot).</li>
+</ul>
+<p><strong>Continuous Integration and Deployment (CI/CD):</strong></p>
+<ul>
+<li>If applicable, set up CI/CD pipelines to automate testing, building, and deploying your project. Tools like GitHub Actions, Travis CI, and Jenkins can help streamline this process.</li>
+</ul>
+<p><strong>Documentation:</strong></p>
+<ul>
+<li>Start documenting your project from the beginning. Include a README file with a project overview, installation instructions, usage guidelines, and contribution guidelines.</li>
+<li>Maintain an ongoing log of your development process, challenges faced, and solutions found.</li>
+</ul>
+<h3 id="summary"><a class="header" href="#summary">Summary</a></h3>
+<p>By following a project-oriented approach, you not only learn how to code but also gain experience in project management, problem-solving, and the software development lifecycle. This method ensures that your learning is practical, goal-oriented, and aligned with real-world applications. It helps build a portfolio of work that demonstrates your skills and can be shared with potential employers or collaborators.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                                                    <a rel="prev" href="cli-hello-world.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+                                                    <a rel="next" href="tour-of-java.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                                    <a rel="prev" href="cli-hello-world.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+                                    <a rel="next" href="tour-of-java.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                            </nav>
+
+        </div>
+
+        
+        
+        
+                <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+        
+                <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+        
+    </body>
+</html>

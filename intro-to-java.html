@@ -1,0 +1,323 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Introduction To Java - Project Oriented Java</title>
+                
+
+        <!-- Custom HTML head -->
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+                <link rel="icon" href="favicon.svg">
+                        <link rel="shortcut icon" href="favicon.png">
+                <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+                <link rel="stylesheet" href="css/print.css" media="print">
+        
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+                <link rel="stylesheet" href="fonts/fonts.css">
+        
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+            </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="course-structure.html"><strong aria-hidden="true">1.</strong> Course Structure</a></li><li class="chapter-item expanded "><a href="resources.html"><strong aria-hidden="true">2.</strong> Resources</a></li><li class="chapter-item expanded "><a href="why-java.html"><strong aria-hidden="true">3.</strong> Why Java</a></li><li class="chapter-item expanded "><a href="basics-of-basics.html"><strong aria-hidden="true">4.</strong> Basics of Basics</a></li><li class="chapter-item expanded "><a href="oop.html"><strong aria-hidden="true">5.</strong> Object Oriented Programming</a></li><li class="chapter-item expanded "><a href="intro-to-java.html" class="active"><strong aria-hidden="true">6.</strong> Introduction To Java</a></li><li class="chapter-item expanded "><a href="installing-java.html"><strong aria-hidden="true">7.</strong> Installing Java</a></li><li class="chapter-item expanded "><a href="setting-up-vscode.html"><strong aria-hidden="true">8.</strong> Setting up Vscode and Extensions</a></li><li class="chapter-item expanded "><a href="cli-hello-world.html"><strong aria-hidden="true">9.</strong> Simple Hello World</a></li><li class="chapter-item expanded "><a href="project-oriented-approach.html"><strong aria-hidden="true">10.</strong> What Project Oriented Approach means</a></li><li class="chapter-item expanded "><a href="tour-of-java.html"><strong aria-hidden="true">11.</strong> Tour of Java</a></li></ol>            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                                                <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                                            </div>
+
+                    <h1 class="menu-title">Project Oriented Java</h1>
+
+                    <div class="right-buttons">
+                                                <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                                                                        
+                    </div>
+                </div>
+
+                                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="introduction-to-java"><a class="header" href="#introduction-to-java">Introduction to Java</a></h1>
+<p><img src="img/2024-05-30-23-15-27.png" alt="" /></p>
+<h2 id="history-of-java"><a class="header" href="#history-of-java">History of Java</a></h2>
+<h3 id="the-past"><a class="header" href="#the-past">The Past</a></h3>
+<p>Java was developed by Sun Microsystems in the mid-1990s by James Gosling and his team. Initially, it was called Oak, but later it was renamed Java. The language was designed with the principle of &quot;write once, run anywhere&quot; (WORA), meaning that compiled Java code can run on any platform that supports Java without the need for recompilation. This cross-platform capability has been one of Java's greatest strengths.</p>
+<p><img src="./img/2024-05-30-23-12-11.png" alt="" /></p>
+<h3 id="early-milestones"><a class="header" href="#early-milestones">Early Milestones</a></h3>
+<ul>
+<li><strong>1995</strong>: Java 1.0 (Oak) released.</li>
+<li><strong>1996</strong>: Java 1.1 introduced inner classes, JavaBeans, JDBC, and RMI.</li>
+<li><strong>1997</strong>: Java 1.2 (Java 2) introduced the Swing graphical API, Collections Framework, and JIT compiler.</li>
+</ul>
+<h2 id="the-present"><a class="header" href="#the-present">The Present</a></h2>
+<p>Java has evolved significantly over the years, becoming one of the most popular programming languages. It is widely used in various domains, including web development, mobile applications (Android), enterprise applications, scientific computing, and more. Java's ecosystem includes a vast array of libraries, frameworks, and tools that support modern software development practices.</p>
+<h3 id="key-features-of-java"><a class="header" href="#key-features-of-java">Key Features of Java</a></h3>
+<ol>
+<li><strong>Platform Independence</strong>: Java's bytecode can run on any system with a compatible JVM.</li>
+<li><strong>Object-Oriented</strong>: Java promotes modular, reusable, and scalable code through object-oriented principles.</li>
+<li><strong>Robust and Secure</strong>: Java has strong memory management, exception handling, and security features.</li>
+<li><strong>Multi-threaded</strong>: Java supports concurrent programming with built-in threading capabilities.</li>
+<li><strong>Rich API</strong>: Java provides a comprehensive standard library for various tasks, from data structures to networking.</li>
+<li><strong>Automatic Memory Management</strong>: Java's garbage collector handles memory allocation and deallocation.</li>
+<li><strong>Dynamic</strong>: Java supports dynamic loading of classes, allowing for flexible and adaptive applications.</li>
+</ol>
+<h3 id="notable-versions-and-features"><a class="header" href="#notable-versions-and-features">Notable Versions and Features</a></h3>
+<h4 id="java-se-5-2004"><a class="header" href="#java-se-5-2004">Java SE 5 (2004)</a></h4>
+<ul>
+<li><strong>Generics</strong>: Enhanced type safety by allowing classes, interfaces, and methods to operate on types specified at compile time.</li>
+<li><strong>Enhanced for-loop</strong>: Simplified iteration over collections and arrays.</li>
+<li><strong>Autoboxing/Unboxing</strong>: Automatic conversion between primitive types and their corresponding wrapper classes.</li>
+<li><strong>Annotations</strong>: Metadata added to Java source code to provide additional information to the compiler.</li>
+<li><strong>Concurrency utilities</strong>: New java.util.concurrent package for multi-threaded programming.</li>
+</ul>
+<h4 id="java-se-6-2006"><a class="header" href="#java-se-6-2006">Java SE 6 (2006)</a></h4>
+<ul>
+<li><strong>Scripting API</strong>: Integrated support for scripting languages.</li>
+<li><strong>Improvements to Web Services</strong>: Better support for web services with JAX-WS.</li>
+<li><strong>Compiler API</strong>: Java Compiler API in javax.tools package.</li>
+<li><strong>Enhanced monitoring and management capabilities</strong>: Improved JMX, JVM monitoring, and diagnostics.</li>
+</ul>
+<h4 id="java-se-7-2011"><a class="header" href="#java-se-7-2011">Java SE 7 (2011)</a></h4>
+<ul>
+<li><strong>Project Coin</strong>: Small language changes like try-with-resources, multi-catch exceptions, and diamond operator.</li>
+<li><strong>Fork/Join Framework</strong>: Simplified parallel processing by breaking tasks into smaller pieces.</li>
+<li><strong>NIO.2</strong>: Enhanced filesystem and I/O capabilities.</li>
+<li><strong>InvokeDynamic</strong>: Improved support for dynamic languages on the JVM.</li>
+</ul>
+<h4 id="java-se-8-2014"><a class="header" href="#java-se-8-2014">Java SE 8 (2014)</a></h4>
+<ul>
+<li><strong>Lambda Expressions</strong>: Introduced functional programming capabilities.</li>
+<li><strong>Streams API</strong>: Enabled functional-style operations on collections.</li>
+<li><strong>Optional</strong>: A container object to handle potentially null values without NullPointerException.</li>
+<li><strong>Date and Time API</strong>: A new modern date and time API in java.time package.</li>
+<li><strong>Default Methods</strong>: Methods with default implementations in interfaces.</li>
+</ul>
+<h4 id="java-se-9-2017"><a class="header" href="#java-se-9-2017">Java SE 9 (2017)</a></h4>
+<ul>
+<li><strong>Project Jigsaw</strong>: Module system for better packaging and dependency management.</li>
+<li><strong>JShell</strong>: Interactive REPL (Read-Eval-Print Loop) tool.</li>
+<li><strong>Improved JIT Compiler</strong>: Introduction of the experimental JIT compiler, Graal.</li>
+<li><strong>Enhanced Stream API</strong>: Added methods for better stream operations.</li>
+</ul>
+<h4 id="java-se-10-2018"><a class="header" href="#java-se-10-2018">Java SE 10 (2018)</a></h4>
+<ul>
+<li><strong>Local-Variable Type Inference</strong>: Introduction of var for local variables.</li>
+<li><strong>Application Class-Data Sharing</strong>: Reduced startup and footprint for applications.</li>
+<li><strong>Parallel Full GC for G1</strong>: Improved garbage collection performance.</li>
+</ul>
+<h4 id="java-se-11-2018"><a class="header" href="#java-se-11-2018">Java SE 11 (2018)</a></h4>
+<ul>
+<li><strong>LTS (Long-Term Support)</strong>: Java 11 is a long-term support release.</li>
+<li><strong>HTTP Client</strong>: Standardized HTTP client API.</li>
+<li><strong>Nest-Based Access Control</strong>: Simplified access control for nested classes.</li>
+<li><strong>Removed Features</strong>: Removed deprecated features like Java EE and CORBA modules.</li>
+</ul>
+<h4 id="java-se-12-2019"><a class="header" href="#java-se-12-2019">Java SE 12 (2019)</a></h4>
+<ul>
+<li><strong>Switch Expressions (Preview)</strong>: Enhanced switch statements for simpler and more readable code.</li>
+<li><strong>JVM Constants API</strong>: New API to model key class-file and runtime artifacts.</li>
+</ul>
+<h4 id="java-se-13-2019"><a class="header" href="#java-se-13-2019">Java SE 13 (2019)</a></h4>
+<ul>
+<li><strong>Text Blocks (Preview)</strong>: Multiline string literals for better readability.</li>
+<li><strong>Reimplemented the Legacy Socket API</strong>: Improved performance and scalability.</li>
+</ul>
+<h4 id="java-se-14-2020"><a class="header" href="#java-se-14-2020">Java SE 14 (2020)</a></h4>
+<ul>
+<li><strong>Switch Expressions</strong>: Finalized switch expressions feature.</li>
+<li><strong>Pattern Matching for instanceof (Preview)</strong>: Simplified type checks.</li>
+<li><strong>Records (Preview)</strong>: Simplified data classes.</li>
+</ul>
+<h4 id="java-se-15-2020"><a class="header" href="#java-se-15-2020">Java SE 15 (2020)</a></h4>
+<ul>
+<li><strong>Text Blocks</strong>: Finalized text blocks feature.</li>
+<li><strong>Hidden Classes</strong>: Improved framework creation and execution.</li>
+</ul>
+<h4 id="java-se-16-2021"><a class="header" href="#java-se-16-2021">Java SE 16 (2021)</a></h4>
+<ul>
+<li><strong>Pattern Matching for instanceof</strong>: Finalized pattern matching for instanceof.</li>
+<li><strong>Records</strong>: Finalized records feature.</li>
+<li><strong>Sealed Classes (Preview)</strong>: Restricted class hierarchies for better inheritance control.</li>
+</ul>
+<h4 id="java-se-17-2021"><a class="header" href="#java-se-17-2021">Java SE 17 (2021)</a></h4>
+<ul>
+<li><strong>LTS (Long-Term Support)</strong>: Java 17 is a long-term support release.</li>
+<li><strong>Sealed Classes</strong>: Finalized sealed classes feature.</li>
+<li><strong>New macOS Rendering Pipeline</strong>: Improved macOS support.</li>
+</ul>
+<hr />
+<h2 id="the-future-of-java"><a class="header" href="#the-future-of-java">The Future of Java</a></h2>
+<h3 id="continuous-evolution"><a class="header" href="#continuous-evolution">Continuous Evolution</a></h3>
+<p>Java continues to evolve with regular releases every six months, ensuring timely updates and new features. This rapid release cadence allows the Java community to adopt new features and improvements more quickly.</p>
+<h3 id="focus-areas"><a class="header" href="#focus-areas">Focus Areas</a></h3>
+<ol>
+<li><strong>Performance</strong>: Ongoing enhancements in JVM performance, including improvements in garbage collection and Just-In-Time (JIT) compilation.</li>
+<li><strong>Language Enhancements</strong>: Continued introduction of language features that improve developer productivity and code readability, such as pattern matching and records.</li>
+<li><strong>Platform Support</strong>: Better support for new platforms and environments, including cloud-native development and containerization.</li>
+<li><strong>Security</strong>: Strengthening security features to protect applications from evolving threats.</li>
+<li><strong>Tooling</strong>: Improved development tools and integration with modern development environments and CI/CD pipelines.</li>
+</ol>
+<h3 id="upcoming-features"><a class="header" href="#upcoming-features">Upcoming Features</a></h3>
+<ul>
+<li><strong>Project Loom</strong>: Introducing lightweight concurrency constructs (fibers) for scalable applications.</li>
+<li><strong>Project Panama</strong>: Enhancing the connection between Java and native code for better performance and interop.</li>
+<li><strong>Project Valhalla</strong>: Introducing value types to improve memory efficiency and performance.</li>
+</ul>
+<hr />
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                                                    <a rel="prev" href="oop.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+                                                    <a rel="next" href="installing-java.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                                    <a rel="prev" href="oop.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+                                    <a rel="next" href="installing-java.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                            </nav>
+
+        </div>
+
+        
+        
+        
+                <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+        
+                <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+        
+    </body>
+</html>

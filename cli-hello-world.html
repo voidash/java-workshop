@@ -3,9 +3,8 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title></title>
-                        <base href="/">
-        
+        <title>Simple Hello World - Project Oriented Java</title>
+                
 
         <!-- Custom HTML head -->
         
@@ -83,7 +82,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="course-structure.html"><strong aria-hidden="true">1.</strong> Course Structure</a></li><li class="chapter-item expanded "><a href="resources.html"><strong aria-hidden="true">2.</strong> Resources</a></li><li class="chapter-item expanded "><a href="why-java.html"><strong aria-hidden="true">3.</strong> Why Java</a></li><li class="chapter-item expanded "><a href="basics-of-basics.html"><strong aria-hidden="true">4.</strong> Basics of Basics</a></li><li class="chapter-item expanded "><a href="oop.html"><strong aria-hidden="true">5.</strong> Object Oriented Programming</a></li><li class="chapter-item expanded "><a href="intro-to-java.html"><strong aria-hidden="true">6.</strong> Introduction To Java</a></li><li class="chapter-item expanded "><a href="installing-java.html"><strong aria-hidden="true">7.</strong> Installing Java</a></li><li class="chapter-item expanded "><a href="setting-up-vscode.html"><strong aria-hidden="true">8.</strong> Setting up Vscode and Extensions</a></li><li class="chapter-item expanded "><a href="cli-hello-world.html"><strong aria-hidden="true">9.</strong> Simple Hello World</a></li><li class="chapter-item expanded "><a href="project-oriented-approach.html"><strong aria-hidden="true">10.</strong> What Project Oriented Approach means</a></li><li class="chapter-item expanded "><a href="tour-of-java.html"><strong aria-hidden="true">11.</strong> Tour of Java</a></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="course-structure.html"><strong aria-hidden="true">1.</strong> Course Structure</a></li><li class="chapter-item expanded "><a href="resources.html"><strong aria-hidden="true">2.</strong> Resources</a></li><li class="chapter-item expanded "><a href="why-java.html"><strong aria-hidden="true">3.</strong> Why Java</a></li><li class="chapter-item expanded "><a href="basics-of-basics.html"><strong aria-hidden="true">4.</strong> Basics of Basics</a></li><li class="chapter-item expanded "><a href="oop.html"><strong aria-hidden="true">5.</strong> Object Oriented Programming</a></li><li class="chapter-item expanded "><a href="intro-to-java.html"><strong aria-hidden="true">6.</strong> Introduction To Java</a></li><li class="chapter-item expanded "><a href="installing-java.html"><strong aria-hidden="true">7.</strong> Installing Java</a></li><li class="chapter-item expanded "><a href="setting-up-vscode.html"><strong aria-hidden="true">8.</strong> Setting up Vscode and Extensions</a></li><li class="chapter-item expanded "><a href="cli-hello-world.html" class="active"><strong aria-hidden="true">9.</strong> Simple Hello World</a></li><li class="chapter-item expanded "><a href="project-oriented-approach.html"><strong aria-hidden="true">10.</strong> What Project Oriented Approach means</a></li><li class="chapter-item expanded "><a href="tour-of-java.html"><strong aria-hidden="true">11.</strong> Tour of Java</a></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -144,14 +143,103 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="document-not-found-404"><a class="header" href="#document-not-found-404">Document not found (404)</a></h1>
-<p>This URL is invalid, sorry. Please use the navigation bar or search to continue.</p>
+                        <hr />
+<h1 id="manual-hello-world-in-java"><a class="header" href="#manual-hello-world-in-java">Manual Hello World in Java</a></h1>
+<h2 id="prerequisites"><a class="header" href="#prerequisites">Prerequisites</a></h2>
+<ul>
+<li>Java Development Kit (JDK) installed and configured in your PATH.</li>
+</ul>
+<p>After you have set the environment variables and when you type <code>java --version</code></p>
+<pre><code>[I] cdjk@voidashs-MacBook-Air ~/test-java&gt; java --version
+openjdk 21.0.2 2024-01-16
+OpenJDK Runtime Environment (build 21.0.2+13-58)
+OpenJDK 64-Bit Server VM (build 21.0.2+13-58, mixed mode, sharing)
+</code></pre>
+<hr />
+<h3 id="step-1-open-visual-studio-code"><a class="header" href="#step-1-open-visual-studio-code">Step 1: Open Visual Studio Code</a></h3>
+<ol>
+<li>Launch Visual Studio Code.</li>
+</ol>
+<h3 id="step-2-create-a-new-java-file"><a class="header" href="#step-2-create-a-new-java-file">Step 2: Create a New Java File</a></h3>
+<ol>
+<li>Open VSCode.</li>
+<li>Click on <code>File &gt; New File</code> or press <code>Ctrl+N</code> (Windows/Linux) or <code>Cmd+N</code> (Mac).</li>
+<li>Save the file by clicking on <code>File &gt; Save</code> or press <code>Ctrl+S</code> (Windows/Linux) or <code>Cmd+S</code> (Mac).</li>
+<li>Name the file <code>HelloWorld.java</code> and save it in your desired directory.</li>
+</ol>
+<h3 id="step-3-write-your-java-code"><a class="header" href="#step-3-write-your-java-code">Step 3: Write Your Java Code</a></h3>
+<ol>
+<li>In <code>HelloWorld.java</code>, add the following code:</li>
+</ol>
+<pre><code class="language-java">public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println(&quot;Hello, World!&quot;);
+    }
+}
+</code></pre>
+<h3 id="step-4-save-the-file"><a class="header" href="#step-4-save-the-file">Step 4: Save the File</a></h3>
+<ol>
+<li>Save the file by pressing <code>Ctrl+S</code> (Windows/Linux) or <code>Cmd+S</code> (Mac).</li>
+</ol>
+<h3 id="step-5-open-integrated-terminal-in-vscode"><a class="header" href="#step-5-open-integrated-terminal-in-vscode">Step 5: Open Integrated Terminal in VSCode</a></h3>
+<ol>
+<li>Open the integrated terminal by clicking on <code>View &gt; Terminal</code> or pressing <code>Ctrl+`</code> (Windows/Linux/Mac).</li>
+</ol>
+<h3 id="step-6-navigate-to-the-directory"><a class="header" href="#step-6-navigate-to-the-directory">Step 6: Navigate to the Directory</a></h3>
+<ol>
+<li>Use the <code>cd</code> command to navigate to the directory where <code>HelloWorld.java</code> is saved. For example:</li>
+</ol>
+<pre><code class="language-sh">cd path/to/your/directory
+</code></pre>
+<p>Replace <code>path/to/your/directory</code> with the actual path.</p>
+<h3 id="step-8-compile-the-java-program"><a class="header" href="#step-8-compile-the-java-program">Step 8: Compile the Java Program</a></h3>
+<ol>
+<li>In the terminal, compile the Java source file using the <code>javac</code> command:</li>
+</ol>
+<pre><code class="language-sh">javac HelloWorld.java
+</code></pre>
+<p>This command compiles <code>HelloWorld.java</code> and produces a <code>HelloWorld.class</code> file, which contains the bytecode that can be executed by the Java Virtual Machine (JVM).</p>
+<h3 id="step-9-run-the-java-program"><a class="header" href="#step-9-run-the-java-program">Step 9: Run the Java Program</a></h3>
+<ol>
+<li>In the terminal, run the compiled Java program using the <code>java</code> command:</li>
+</ol>
+<pre><code class="language-sh">java HelloWorld
+</code></pre>
+<p>You should see the following output:</p>
+<pre><code class="language-plaintext">Hello, World!
+</code></pre>
+<hr />
+<h2 id="summary-of-commands"><a class="header" href="#summary-of-commands">Summary of Commands</a></h2>
+<ol>
+<li>
+<p><strong>Navigate to the directory</strong>:</p>
+<pre><code class="language-sh">cd path/to/your/directory
+</code></pre>
+</li>
+<li>
+<p><strong>Compile the Java source file</strong>:</p>
+<pre><code class="language-sh">javac HelloWorld.java
+</code></pre>
+</li>
+<li>
+<p><strong>Run the compiled Java program</strong>:</p>
+<pre><code class="language-sh">java HelloWorld
+</code></pre>
+</li>
+</ol>
+<hr />
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+                                                    <a rel="prev" href="setting-up-vscode.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
                         
+                                                    <a rel="next" href="project-oriented-approach.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
                         
                         <div style="clear: both"></div>
                     </nav>
@@ -159,7 +247,13 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                                    <a rel="prev" href="setting-up-vscode.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
                 
+                                    <a rel="next" href="project-oriented-approach.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
                             </nav>
 
         </div>

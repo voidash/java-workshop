@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Course Structure - Project Oriented Java</title>
+        <title>Object Oriented Programming - Project Oriented Java</title>
                 
 
         <!-- Custom HTML head -->
@@ -82,7 +82,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="course-structure.html" class="active"><strong aria-hidden="true">1.</strong> Course Structure</a></li><li class="chapter-item expanded "><a href="resources.html"><strong aria-hidden="true">2.</strong> Resources</a></li><li class="chapter-item expanded "><a href="why-java.html"><strong aria-hidden="true">3.</strong> Why Java</a></li><li class="chapter-item expanded "><a href="basics-of-basics.html"><strong aria-hidden="true">4.</strong> Basics of Basics</a></li><li class="chapter-item expanded "><a href="oop.html"><strong aria-hidden="true">5.</strong> Object Oriented Programming</a></li><li class="chapter-item expanded "><a href="intro-to-java.html"><strong aria-hidden="true">6.</strong> Introduction To Java</a></li><li class="chapter-item expanded "><a href="installing-java.html"><strong aria-hidden="true">7.</strong> Installing Java</a></li><li class="chapter-item expanded "><a href="setting-up-vscode.html"><strong aria-hidden="true">8.</strong> Setting up Vscode and Extensions</a></li><li class="chapter-item expanded "><a href="cli-hello-world.html"><strong aria-hidden="true">9.</strong> Simple Hello World</a></li><li class="chapter-item expanded "><a href="project-oriented-approach.html"><strong aria-hidden="true">10.</strong> What Project Oriented Approach means</a></li><li class="chapter-item expanded "><a href="tour-of-java.html"><strong aria-hidden="true">11.</strong> Tour of Java</a></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="course-structure.html"><strong aria-hidden="true">1.</strong> Course Structure</a></li><li class="chapter-item expanded "><a href="resources.html"><strong aria-hidden="true">2.</strong> Resources</a></li><li class="chapter-item expanded "><a href="why-java.html"><strong aria-hidden="true">3.</strong> Why Java</a></li><li class="chapter-item expanded "><a href="basics-of-basics.html"><strong aria-hidden="true">4.</strong> Basics of Basics</a></li><li class="chapter-item expanded "><a href="oop.html" class="active"><strong aria-hidden="true">5.</strong> Object Oriented Programming</a></li><li class="chapter-item expanded "><a href="intro-to-java.html"><strong aria-hidden="true">6.</strong> Introduction To Java</a></li><li class="chapter-item expanded "><a href="installing-java.html"><strong aria-hidden="true">7.</strong> Installing Java</a></li><li class="chapter-item expanded "><a href="setting-up-vscode.html"><strong aria-hidden="true">8.</strong> Setting up Vscode and Extensions</a></li><li class="chapter-item expanded "><a href="cli-hello-world.html"><strong aria-hidden="true">9.</strong> Simple Hello World</a></li><li class="chapter-item expanded "><a href="project-oriented-approach.html"><strong aria-hidden="true">10.</strong> What Project Oriented Approach means</a></li><li class="chapter-item expanded "><a href="tour-of-java.html"><strong aria-hidden="true">11.</strong> Tour of Java</a></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -143,99 +143,184 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="programming-in-java-a-project-oriented-approach"><a class="header" href="#programming-in-java-a-project-oriented-approach">Programming in Java: A project Oriented Approach</a></h1>
-<p><img src="img/2024-05-30-23-16-13.png" alt="" /></p>
-<h3 id="instructor-a-hrefhttpsgithubcomvoidashashish-thapa-a"><a class="header" href="#instructor-a-hrefhttpsgithubcomvoidashashish-thapa-a">Instructor: <a href="https://github.com/voidash">Ashish Thapa </a></a></h3>
-<h3 id="expected-time--16-hours"><a class="header" href="#expected-time--16-hours">Expected Time : 16 hours</a></h3>
-<p>This is official mdbook for the proposed programming workshop for the Java. Here you will find the written guides for the workshop. Following is the course structure for the workshop. Please note that this is subject to change as the workshop starts. </p>
-<h3 id="assignments"><a class="header" href="#assignments">Assignments</a></h3>
-<p>Each session after the first session will be coupled with assignments with a laid out project with certain missing functions that has to be implemented.If the function is implemented correctly then it passes the unit test which marks the completion of assignment. </p>
-<h2 id="what-to-expect-from-the-workshop"><a class="header" href="#what-to-expect-from-the-workshop">What to expect from the workshop</a></h2>
-<p>The students will be able to </p>
+                        <p>Object-Oriented Programming (OOP) is a programming paradigm based on the concept of objects, which can contain data and code: data in the form of fields (often known as attributes or properties), and code in the form of procedures (often known as methods). OOP focuses on the creation of reusable code and solving problems by modeling real-world entities. The four fundamental principles of OOP are encapsulation, inheritance, polymorphism, and abstraction.</p>
+<h3 id="1-encapsulation"><a class="header" href="#1-encapsulation">1. Encapsulation</a></h3>
+<p><strong>Definition:</strong> Encapsulation is the mechanism of restricting access to certain details of an object and exposing only the necessary parts. This is often achieved using access modifiers (private, protected, public) and by providing public getter and setter methods to access private fields.</p>
+<p><strong>Benefits:</strong></p>
 <ul>
-<li>Where Java is used in the industry and what are some popular java projects and career prospects with Java</li>
-<li>understand the fundamentals of Java</li>
-<li>How to program with a project oriented approach</li>
-<li>[Exploration] Understanding how a java projects are typically structured and understand the concept of 
-<ul>
-<li>Testing and Code coverage</li>
-<li>Linting </li>
-<li>formatting</li>
+<li>Protects the internal state of an object from unintended modification.</li>
+<li>Improves modularity and maintainability.</li>
+<li>Allows for controlled access to the properties of an object.</li>
 </ul>
+<p><strong>Example:</strong></p>
+<pre><code class="language-java">public class Person {
+    private String name;
+    private int age;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+}
+</code></pre>
+<h3 id="2-inheritance"><a class="header" href="#2-inheritance">2. Inheritance</a></h3>
+<p><strong>Definition:</strong> Inheritance is the mechanism by which one class (the subclass or derived class) inherits the attributes and methods of another class (the superclass or base class). This allows for code reuse and the creation of a hierarchical relationship between classes.</p>
+<p><strong>Benefits:</strong></p>
+<ul>
+<li>Promotes code reuse.</li>
+<li>Establishes a natural hierarchy.</li>
+<li>Enhances maintainability and scalability.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code class="language-java">public class Animal {
+    public void eat() {
+        System.out.println(&quot;This animal eats food.&quot;);
+    }
+}
+
+public class Dog extends Animal {
+    public void bark() {
+        System.out.println(&quot;The dog barks.&quot;);
+    }
+}
+</code></pre>
+<h3 id="3-polymorphism"><a class="header" href="#3-polymorphism">3. Polymorphism</a></h3>
+<p><strong>Definition:</strong> Polymorphism allows objects of different classes to be treated as objects of a common superclass. It is achieved through method overriding (runtime polymorphism) and method overloading (compile-time polymorphism).</p>
+<p><strong>Benefits:</strong></p>
+<ul>
+<li>Enhances flexibility and integration.</li>
+<li>Simplifies code by allowing one interface to be used for a general class of actions.</li>
+<li>Promotes the design of extensible systems.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code class="language-java">public class Animal {
+    public void makeSound() {
+        System.out.println(&quot;This animal makes a sound.&quot;);
+    }
+}
+
+public class Dog extends Animal {
+    @Override
+    public void makeSound() {
+        System.out.println(&quot;The dog barks.&quot;);
+    }
+}
+
+public class Cat extends Animal {
+    @Override
+    public void makeSound() {
+        System.out.println(&quot;The cat meows.&quot;);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal myDog = new Dog();
+        Animal myCat = new Cat();
+        myDog.makeSound();
+        myCat.makeSound();
+    }
+}
+</code></pre>
+<h3 id="4-abstraction"><a class="header" href="#4-abstraction">4. Abstraction</a></h3>
+<p><strong>Definition:</strong> Abstraction is the concept of hiding the complex implementation details and showing only the essential features of an object. It helps in reducing programming complexity and effort.</p>
+<p><strong>Benefits:</strong></p>
+<ul>
+<li>Simplifies the complexity of software development.</li>
+<li>Enhances code readability and maintainability.</li>
+<li>Focuses on what an object does instead of how it does it.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code class="language-java">abstract class Animal {
+    public abstract void makeSound();
+
+    public void sleep() {
+        System.out.println(&quot;This animal is sleeping.&quot;);
+    }
+}
+
+public class Dog extends Animal {
+    @Override
+    public void makeSound() {
+        System.out.println(&quot;The dog barks.&quot;);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal myDog = new Dog();
+        myDog.makeSound();
+        myDog.sleep();
+    }
+}
+</code></pre>
+<h3 id="additional-oop-concepts"><a class="header" href="#additional-oop-concepts">Additional OOP Concepts</a></h3>
+<p><strong>1. Classes and Objects:</strong></p>
+<ul>
+<li><strong>Class:</strong> A blueprint for creating objects. It defines a datatype by bundling data and methods that work on the data.</li>
+<li><strong>Object:</strong> An instance of a class. It has a state and behavior defined by the class.</li>
+</ul>
+<p><strong>2. Method Overloading:</strong></p>
+<ul>
+<li>Allows a class to have more than one method with the same name, as long as their parameter lists are different.</li>
+<li>Example:
+<pre><code class="language-java">public class MathUtils {
+    public int add(int a, int b) {
+        return a + b;
+    }
+
+    public double add(double a, double b) {
+        return a + b;
+    }
+}
+</code></pre>
 </li>
-<li>[Project] Understand Networking Libraries in Java, understand how a barebones HTTP server works</li>
-<li>[Project] Understand Various HTTP methods, and have a base to implement their own REST API without using any framework or library.</li>
 </ul>
-<h2 id="what-not-to-expect-from-the-workshop"><a class="header" href="#what-not-to-expect-from-the-workshop">What not to expect from the workshop</a></h2>
+<p><strong>3. Method Overriding:</strong></p>
 <ul>
-<li>Mastery of Java : Java is vast and complex language that has existed since 1995. 16hrs workshop won't be able to cover everything </li>
-<li>Extensive Hands on experience: Covering a lot of things require skimming over certain portion which will require efforts from students side. I will try to close that gap with assignments but a workshop is simply a nudge which requires a lot of effort from the students side. Each Session will be coupled with lots of resources students will have to explore themselves, but there won't be much of hands on experience on the workshop itself.</li>
-<li>Won't guarantee a java developer Job </li>
-</ul>
-<h3 id="session-0-programming-and-java"><a class="header" href="#session-0-programming-and-java">Session 0: Programming and Java</a></h3>
-<ul>
-<li>The essence of programming </li>
-<li>How to learn any technologies</li>
-<li>Project Oriented Learning</li>
-<li>Introduction to Java, JVM and OpenJDK</li>
-<li>Setting up the VSCode editor for Java (installing Extensions, debuggers)</li>
-<li>Is Java Dead? Who uses java and Why are there so many jobs in javascript?</li>
-</ul>
-<h3 id="session-1-setting-up-the-environment"><a class="header" href="#session-1-setting-up-the-environment">Session 1: Setting up the Environment</a></h3>
-<ul>
-<li>Introduction to Git and setting up the environment</li>
-<li>Walkthrough on how to do assignments </li>
-<li>Running the simple Hello world program, introduction to Java testing</li>
-</ul>
-<h3 id="session-2-proper-introduction-to-java"><a class="header" href="#session-2-proper-introduction-to-java">Session 2: Proper Introduction To Java</a></h3>
-<ul>
-<li>significance of Object Oriented Programming</li>
-<li>Java Basics
-<ul>
-<li>variables</li>
-<li>primitive and User defined data types</li>
-<li>Operators </li>
-<li>Control Flow statement, Loops</li>
-</ul>
+<li>Allows a subclass to provide a specific implementation for a method that is already defined in its superclass.</li>
+<li>Example:
+<pre><code class="language-java">public class Animal {
+    public void makeSound() {
+        System.out.println(&quot;This animal makes a sound.&quot;);
+    }
+}
+
+public class Dog extends Animal {
+    @Override
+    public void makeSound() {
+        System.out.println(&quot;The dog barks.&quot;);
+    }
+}
+</code></pre>
 </li>
-<li><strong>[Project]</strong> Introduction to Networking, Wireshark </li>
 </ul>
-<h3 id="session-3-object-oriented-programming"><a class="header" href="#session-3-object-oriented-programming">Session 3: Object Oriented Programming</a></h3>
+<h2 id="notes"><a class="header" href="#notes">Notes</a></h2>
 <ul>
-<li>Classes, Overloading Methods and Constructors</li>
-<li>Objects and References</li>
-<li>Java Testing in depth </li>
-<li>Java Build pipeline and Project Structure</li>
-<li><strong>[Project]</strong> Setting up a simple project in Java and exploring Java Networking Libraries </li>
-</ul>
-<h3 id="session-4-exception-handling-interfaces-and-inheritance"><a class="header" href="#session-4-exception-handling-interfaces-and-inheritance">Session 4: Exception Handling, Interfaces and Inheritance</a></h3>
-<ul>
-<li>Exception Handling Mechanisms </li>
-<li>Class Inheritance, Interface and Runtime polymorphism</li>
-<li><strong>[Project]</strong> Implement the <code>accept()</code> method to create incoming connections</li>
-</ul>
-<h3 id="session-5-project-deep-dive-already-built-ecommerce-spring-web-application"><a class="header" href="#session-5-project-deep-dive-already-built-ecommerce-spring-web-application">Session 5: Project Deep Dive (already built Ecommerce Spring Web application)</a></h3>
-<ul>
-<li>Introduction to building application with spring boot </li>
-<li>Brief about Dockerfiles and CI/CD</li>
-<li>How to read github README and start experimenting with the project</li>
-</ul>
-<h3 id="session-6-completing-the-http-server"><a class="header" href="#session-6-completing-the-http-server">Session 6: Completing the HTTP Server</a></h3>
-<ul>
-<li><strong>[Project]</strong> Understanding what RFCs are and how to read RFCs, understanding HTTP methods and handling them </li>
-</ul>
-<h3 id="session-7-design-patterns"><a class="header" href="#session-7-design-patterns">Session 7: Design Patterns</a></h3>
-<ul>
-<li>Introduction to Design Patterns </li>
-<li><strong>[Project]</strong> Creating a basic HTTP router and creating a simple API with our HTTP server we built from scratch </li>
+<li>ask if someone knows what a diamond problem is? </li>
+<li>ask if someone knows what programming paradigm means?</li>
 </ul>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+                                                    <a rel="prev" href="basics-of-basics.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
                         
-                                                    <a rel="next" href="resources.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                                    <a rel="next" href="intro-to-java.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -245,8 +330,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                                    <a rel="prev" href="basics-of-basics.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
                 
-                                    <a rel="next" href="resources.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                    <a rel="next" href="intro-to-java.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                             </nav>

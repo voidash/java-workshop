@@ -3,9 +3,8 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title></title>
-                        <base href="/">
-        
+        <title>Basics of Basics - Project Oriented Java</title>
+                
 
         <!-- Custom HTML head -->
         
@@ -83,7 +82,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="course-structure.html"><strong aria-hidden="true">1.</strong> Course Structure</a></li><li class="chapter-item expanded "><a href="resources.html"><strong aria-hidden="true">2.</strong> Resources</a></li><li class="chapter-item expanded "><a href="why-java.html"><strong aria-hidden="true">3.</strong> Why Java</a></li><li class="chapter-item expanded "><a href="basics-of-basics.html"><strong aria-hidden="true">4.</strong> Basics of Basics</a></li><li class="chapter-item expanded "><a href="oop.html"><strong aria-hidden="true">5.</strong> Object Oriented Programming</a></li><li class="chapter-item expanded "><a href="intro-to-java.html"><strong aria-hidden="true">6.</strong> Introduction To Java</a></li><li class="chapter-item expanded "><a href="installing-java.html"><strong aria-hidden="true">7.</strong> Installing Java</a></li><li class="chapter-item expanded "><a href="setting-up-vscode.html"><strong aria-hidden="true">8.</strong> Setting up Vscode and Extensions</a></li><li class="chapter-item expanded "><a href="cli-hello-world.html"><strong aria-hidden="true">9.</strong> Simple Hello World</a></li><li class="chapter-item expanded "><a href="project-oriented-approach.html"><strong aria-hidden="true">10.</strong> What Project Oriented Approach means</a></li><li class="chapter-item expanded "><a href="tour-of-java.html"><strong aria-hidden="true">11.</strong> Tour of Java</a></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="course-structure.html"><strong aria-hidden="true">1.</strong> Course Structure</a></li><li class="chapter-item expanded "><a href="resources.html"><strong aria-hidden="true">2.</strong> Resources</a></li><li class="chapter-item expanded "><a href="why-java.html"><strong aria-hidden="true">3.</strong> Why Java</a></li><li class="chapter-item expanded "><a href="basics-of-basics.html" class="active"><strong aria-hidden="true">4.</strong> Basics of Basics</a></li><li class="chapter-item expanded "><a href="oop.html"><strong aria-hidden="true">5.</strong> Object Oriented Programming</a></li><li class="chapter-item expanded "><a href="intro-to-java.html"><strong aria-hidden="true">6.</strong> Introduction To Java</a></li><li class="chapter-item expanded "><a href="installing-java.html"><strong aria-hidden="true">7.</strong> Installing Java</a></li><li class="chapter-item expanded "><a href="setting-up-vscode.html"><strong aria-hidden="true">8.</strong> Setting up Vscode and Extensions</a></li><li class="chapter-item expanded "><a href="cli-hello-world.html"><strong aria-hidden="true">9.</strong> Simple Hello World</a></li><li class="chapter-item expanded "><a href="project-oriented-approach.html"><strong aria-hidden="true">10.</strong> What Project Oriented Approach means</a></li><li class="chapter-item expanded "><a href="tour-of-java.html"><strong aria-hidden="true">11.</strong> Tour of Java</a></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -144,14 +143,47 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="document-not-found-404"><a class="header" href="#document-not-found-404">Document not found (404)</a></h1>
-<p>This URL is invalid, sorry. Please use the navigation bar or search to continue.</p>
+                        <h2 id="getting-started-with-basics-in-java-and-programming"><a class="header" href="#getting-started-with-basics-in-java-and-programming">Getting Started with Basics in Java and Programming</a></h2>
+<h3 id="1-coder-vs-programmer"><a class="header" href="#1-coder-vs-programmer">1. Coder vs Programmer</a></h3>
+<p><strong>Coder:</strong> This term often refers to someone who writes code. Coders may have a basic understanding of programming languages and write simple scripts or small programs.</p>
+<p><strong>Programmer:</strong> A programmer is someone with a deeper understanding of programming concepts, algorithms, and software development. Programmers often design, develop, and maintain complex applications and systems.</p>
+<h3 id="2-source-code-program-script-whats-the-difference"><a class="header" href="#2-source-code-program-script-whats-the-difference">2. Source Code, Program, Script: What's the Difference?</a></h3>
+<p><strong>Source Code:</strong> This is the human-readable set of instructions written in a programming language. It needs to be compiled or interpreted to run on a computer.</p>
+<p><strong>Program:</strong> A program is an executable piece of software that performs a specific task or set of tasks. It is created from source code through a process of compilation or interpretation. Not human readable </p>
+<p><strong>Script:</strong> A script is a type of program written in an interpreted language. Scripts are usually simpler and smaller than full programs and are often used for automating tasks.</p>
+<h3 id="3-ide-vs-editor"><a class="header" href="#3-ide-vs-editor">3. IDE vs Editor</a></h3>
+<p><strong>IDE (Integrated Development Environment):</strong> An IDE is a comprehensive software suite that provides tools for software development. It typically includes a code editor, compiler/interpreter, debugger, and other features like code completion and version control integration. Examples: IntelliJ IDEA, Eclipse, NetBeans.</p>
+<p><strong>Editor:</strong> A code editor is a text editor specifically designed for writing and editing code. It may offer syntax highlighting and basic code completion but lacks the extensive tools provided by an IDE. Examples: Visual Studio Code, Sublime Text, Notepad++.</p>
+<h3 id="4-compiled-vs-interpreted-language"><a class="header" href="#4-compiled-vs-interpreted-language">4. Compiled vs Interpreted Language</a></h3>
+<p><strong>Compiled Language:</strong> In a compiled language, the source code is translated into machine code by a compiler before it is executed. The resulting executable file can be run directly by the computer's hardware. Examples: C, C++.</p>
+<p><strong>Interpreted Language:</strong> In an interpreted language, the source code is executed directly by an interpreter, which reads and executes the code line by line at runtime. Examples: Python, JavaScript.</p>
+<h3 id="5-what-a-virtual-machine-is"><a class="header" href="#5-what-a-virtual-machine-is">5. What a Virtual Machine Is?</a></h3>
+<p><strong>Virtual Machine (VM):</strong> A virtual machine is a software emulation of a physical computer. It runs an operating system and applications just like a physical machine but is isolated from the underlying hardware. VMs are used for running applications in a platform-independent manner, providing security, and testing different environments.</p>
+<p><strong>Java Virtual Machine (JVM):</strong> In the context of Java, the JVM is a virtual machine that allows Java programs to run on any device or operating system. The JVM interprets Java bytecode (compiled Java source code) and executes it, providing platform independence.</p>
+<h3 id="6-additional-concepts-for-java-beginners"><a class="header" href="#6-additional-concepts-for-java-beginners">6. Additional Concepts for Java Beginners</a></h3>
+<p><strong>Class and Object:</strong> Java is an object-oriented programming (OOP) language. A class is a blueprint for creating objects (instances), which are concrete instances of the class.</p>
+<p><strong>Method:</strong> A method is a block of code within a class that performs a specific task. Methods define the behavior of objects.</p>
+<p><strong>Inheritance:</strong> This OOP concept allows a new class (subclass) to inherit properties and methods from an existing class (superclass), promoting code reuse.</p>
+<p><strong>Interface:</strong> An interface is a reference type in Java that is similar to a class but only contains abstract methods (methods without a body). Classes can implement interfaces, providing the specific behavior.</p>
+<p><strong>Exception Handling:</strong> Java provides a robust mechanism for handling runtime errors through exceptions. Exceptions are objects representing an error condition, and they can be caught and handled using try-catch blocks. </p>
+<p><strong>Garbage Collection:</strong> Java automatically manages memory allocation and deallocation through garbage collection, which frees up memory used by objects that are no longer in use.</p>
+<p><strong>Packages:</strong> Packages are used to group related classes and interfaces, providing modularity and namespace management. Java's standard library is organized into packages.</p>
+<h6 id="workshop-notes"><a class="header" href="#workshop-notes">Workshop Notes</a></h6>
+<ul>
+<li>ask difference between error, warning and exceptions?</li>
+</ul>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+                                                    <a rel="prev" href="why-java.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
                         
+                                                    <a rel="next" href="oop.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
                         
                         <div style="clear: both"></div>
                     </nav>
@@ -159,7 +191,13 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                                    <a rel="prev" href="why-java.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
                 
+                                    <a rel="next" href="oop.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
                             </nav>
 
         </div>

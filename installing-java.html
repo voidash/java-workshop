@@ -3,9 +3,8 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title></title>
-                        <base href="/">
-        
+        <title>Installing Java - Project Oriented Java</title>
+                
 
         <!-- Custom HTML head -->
         
@@ -83,7 +82,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="course-structure.html"><strong aria-hidden="true">1.</strong> Course Structure</a></li><li class="chapter-item expanded "><a href="resources.html"><strong aria-hidden="true">2.</strong> Resources</a></li><li class="chapter-item expanded "><a href="why-java.html"><strong aria-hidden="true">3.</strong> Why Java</a></li><li class="chapter-item expanded "><a href="basics-of-basics.html"><strong aria-hidden="true">4.</strong> Basics of Basics</a></li><li class="chapter-item expanded "><a href="oop.html"><strong aria-hidden="true">5.</strong> Object Oriented Programming</a></li><li class="chapter-item expanded "><a href="intro-to-java.html"><strong aria-hidden="true">6.</strong> Introduction To Java</a></li><li class="chapter-item expanded "><a href="installing-java.html"><strong aria-hidden="true">7.</strong> Installing Java</a></li><li class="chapter-item expanded "><a href="setting-up-vscode.html"><strong aria-hidden="true">8.</strong> Setting up Vscode and Extensions</a></li><li class="chapter-item expanded "><a href="cli-hello-world.html"><strong aria-hidden="true">9.</strong> Simple Hello World</a></li><li class="chapter-item expanded "><a href="project-oriented-approach.html"><strong aria-hidden="true">10.</strong> What Project Oriented Approach means</a></li><li class="chapter-item expanded "><a href="tour-of-java.html"><strong aria-hidden="true">11.</strong> Tour of Java</a></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="course-structure.html"><strong aria-hidden="true">1.</strong> Course Structure</a></li><li class="chapter-item expanded "><a href="resources.html"><strong aria-hidden="true">2.</strong> Resources</a></li><li class="chapter-item expanded "><a href="why-java.html"><strong aria-hidden="true">3.</strong> Why Java</a></li><li class="chapter-item expanded "><a href="basics-of-basics.html"><strong aria-hidden="true">4.</strong> Basics of Basics</a></li><li class="chapter-item expanded "><a href="oop.html"><strong aria-hidden="true">5.</strong> Object Oriented Programming</a></li><li class="chapter-item expanded "><a href="intro-to-java.html"><strong aria-hidden="true">6.</strong> Introduction To Java</a></li><li class="chapter-item expanded "><a href="installing-java.html" class="active"><strong aria-hidden="true">7.</strong> Installing Java</a></li><li class="chapter-item expanded "><a href="setting-up-vscode.html"><strong aria-hidden="true">8.</strong> Setting up Vscode and Extensions</a></li><li class="chapter-item expanded "><a href="cli-hello-world.html"><strong aria-hidden="true">9.</strong> Simple Hello World</a></li><li class="chapter-item expanded "><a href="project-oriented-approach.html"><strong aria-hidden="true">10.</strong> What Project Oriented Approach means</a></li><li class="chapter-item expanded "><a href="tour-of-java.html"><strong aria-hidden="true">11.</strong> Tour of Java</a></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -144,14 +143,99 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="document-not-found-404"><a class="header" href="#document-not-found-404">Document not found (404)</a></h1>
-<p>This URL is invalid, sorry. Please use the navigation bar or search to continue.</p>
+                        <hr />
+<h1 id="installing-openjdk-16-on-windows-mac-and-linux"><a class="header" href="#installing-openjdk-16-on-windows-mac-and-linux">Installing OpenJDK 16 on Windows, Mac, and Linux</a></h1>
+<h2 id="prerequisites"><a class="header" href="#prerequisites">Prerequisites</a></h2>
+<ol>
+<li>Ensure you have an internet connection.</li>
+<li>Administrator privileges might be required for some steps.</li>
+</ol>
+<hr />
+<h2 id="installing-openjdk-16-on-windows"><a class="header" href="#installing-openjdk-16-on-windows">Installing OpenJDK 16 on Windows</a></h2>
+<p><a href="https://www.freecodecamp.org/news/install-openjdk-free-java-multi-os-guide/">Freecode camp tutorial on Installing Java multi-os guide</a></p>
+<h3 id="step-1-download-the-openjdk-16-installer"><a class="header" href="#step-1-download-the-openjdk-16-installer">Step 1: Download the OpenJDK 16 installer</a></h3>
+<p>Go to the <a href="https://adoptopenjdk.net/releases.html">AdoptOpenJDK page</a> or the <a href="https://jdk.java.net/16/">OpenJDK 16 official download page</a> and download the appropriate installer for your system.</p>
+<h3 id="step-2-run-the-installer"><a class="header" href="#step-2-run-the-installer">Step 2: Run the installer</a></h3>
+<ol>
+<li>Double-click the downloaded <code>.msi</code> file.</li>
+<li>Follow the on-screen instructions to install OpenJDK 16.</li>
+</ol>
+<h3 id="step-3-set-up-the-java-environment-variables"><a class="header" href="#step-3-set-up-the-java-environment-variables">Step 3: Set up the Java environment variables</a></h3>
+<ol>
+<li>Open the Start Menu, search for &quot;Environment Variables&quot;, and select &quot;Edit the system environment variables&quot;.</li>
+<li>In the System Properties window, click on the &quot;Environment Variables&quot; button.</li>
+<li>Under &quot;System variables&quot;, click &quot;New&quot; to add a new variable.
+<ul>
+<li>Variable name: <code>JAVA_HOME</code></li>
+<li>Variable value: <code>C:\Program Files\AdoptOpenJDK\jdk-16.0.x</code> (replace <code>jdk-16.0.x</code> with your actual JDK folder name)</li>
+</ul>
+</li>
+<li>Find the <code>Path</code> variable under &quot;System variables&quot;, select it, and click &quot;Edit&quot;.</li>
+<li>Click &quot;New&quot; and add <code>%JAVA_HOME%\bin</code>.</li>
+<li>Click &quot;OK&quot; to close all windows.</li>
+</ol>
+<h3 id="step-4-verify-the-installation"><a class="header" href="#step-4-verify-the-installation">Step 4: Verify the installation</a></h3>
+<p>Open Command Prompt and type:</p>
+<pre><code class="language-cmd">java -version
+</code></pre>
+<p>You should see output similar to:</p>
+<pre><code class="language-plaintext">openjdk version &quot;16.0.2&quot; 2021-07-20
+OpenJDK Runtime Environment (build 16.0.2+7-67)
+OpenJDK 64-Bit Server VM (build 16.0.2+7-67, mixed mode, sharing)
+</code></pre>
+<hr />
+<h2 id="installing-openjdk-16-on-mac"><a class="header" href="#installing-openjdk-16-on-mac">Installing OpenJDK 16 on Mac</a></h2>
+<h3 id="step-1-install-homebrew-if-not-already-installed"><a class="header" href="#step-1-install-homebrew-if-not-already-installed">Step 1: Install Homebrew (if not already installed)</a></h3>
+<p>Homebrew is a package manager for macOS.</p>
+<pre><code class="language-bash">/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;
+</code></pre>
+<h3 id="step-2-use-homebrew-to-install-openjdk-16"><a class="header" href="#step-2-use-homebrew-to-install-openjdk-16">Step 2: Use Homebrew to install OpenJDK 16</a></h3>
+<pre><code class="language-bash">brew install openjdk@16
+</code></pre>
+<h3 id="step-3-configure-the-java-environment-variables"><a class="header" href="#step-3-configure-the-java-environment-variables">Step 3: Configure the Java environment variables</a></h3>
+<p>Add the following to your shell profile (e.g., <code>~/.zshrc</code> or <code>~/.bash_profile</code>):</p>
+<pre><code class="language-bash">echo 'export PATH=&quot;/usr/local/opt/openjdk@16/bin:$PATH&quot;' &gt;&gt; ~/.zshrc
+echo 'export CPPFLAGS=&quot;-I/usr/local/opt/openjdk@16/include&quot;' &gt;&gt; ~/.zshrc
+source ~/.zshrc
+</code></pre>
+<h3 id="step-4-verify-the-installation-1"><a class="header" href="#step-4-verify-the-installation-1">Step 4: Verify the installation</a></h3>
+<pre><code class="language-bash">java -version
+</code></pre>
+<p>You should see output similar to:</p>
+<pre><code class="language-plaintext">openjdk version &quot;16.0.2&quot; 2021-07-20
+OpenJDK Runtime Environment Homebrew (build 16.0.2+7)
+OpenJDK 64-Bit Server VM Homebrew (build 16.0.2+7, mixed mode)
+</code></pre>
+<hr />
+<h2 id="installing-openjdk-17-on-linux"><a class="header" href="#installing-openjdk-17-on-linux">Installing OpenJDK 17 on Linux</a></h2>
+<p>Debian based distros currenly have openjdk 17 on their repository. </p>
+<h3 id="step-1-update-the-package-index"><a class="header" href="#step-1-update-the-package-index">Step 1: Update the package index</a></h3>
+<pre><code class="language-bash">sudo apt update
+</code></pre>
+<h3 id="step-2-install-openjdk-16"><a class="header" href="#step-2-install-openjdk-16">Step 2: Install OpenJDK 16</a></h3>
+<pre><code class="language-bash">sudo apt install openjdk-17-jdk
+</code></pre>
+<h3 id="step-3-verify-the-installation"><a class="header" href="#step-3-verify-the-installation">Step 3: Verify the installation</a></h3>
+<pre><code class="language-bash">java -version
+</code></pre>
+<p>You should see output similar to:</p>
+<pre><code class="language-plaintext">openjdk version &quot;17.0.2&quot; 2021-07-20
+OpenJDK Runtime Environment (build 17.0.2+7-Ubuntu-0ubuntu2.20.04)
+OpenJDK 64-Bit Server VM (build 17.0.2+7-Ubuntu-0ubuntu2.20.04, mixed mode, sharing)
+</code></pre>
+<hr />
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+                                                    <a rel="prev" href="intro-to-java.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
                         
+                                                    <a rel="next" href="setting-up-vscode.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
                         
                         <div style="clear: both"></div>
                     </nav>
@@ -159,7 +243,13 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                                    <a rel="prev" href="intro-to-java.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
                 
+                                    <a rel="next" href="setting-up-vscode.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
                             </nav>
 
         </div>
