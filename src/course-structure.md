@@ -1,5 +1,7 @@
 # Programming in Java: A project Oriented Approach
 
+![](img/2024-05-30-23-16-13.png)
+
 ### Instructor: [Ashish Thapa ](https://github.com/voidash)
 
 ### Expected Time : 16 hours
