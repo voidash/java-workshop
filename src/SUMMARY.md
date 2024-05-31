@@ -10,6 +10,17 @@
 - [Setting up Vscode and Extensions](./setting-up-vscode.md)
 - [Simple Hello World](./cli-hello-world.md)
 - [What Project Oriented Approach means](./project-oriented-approach.md)
+- [Assignment](./assignment-1.md)
+- [setting up github](./github-setup.md)
 - [Tour of Java](./tour-of-java.md)
+- [Refining Basics](./more-into-basics.md)
+- [Array and ArrayLists](./array-list.md)
+- [Strings](./strings.md)
+- [Classes](./classes.md)
+- [Object And References](./objects-and-references.md)
+- [Types](./types.md)
+- [Reading Files](./reading-files.md)
+- [Seperation of Concerns](./seperation-of-concerns.md)
+- [Testing](./testing.md)
 
 
