@@ -1,0 +1,336 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Reading Files - Project Oriented Java</title>
+                
+
+        <!-- Custom HTML head -->
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+                <link rel="icon" href="favicon.svg">
+                        <link rel="shortcut icon" href="favicon.png">
+                <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+                <link rel="stylesheet" href="css/print.css" media="print">
+        
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+                <link rel="stylesheet" href="fonts/fonts.css">
+        
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+            </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="course-structure.html"><strong aria-hidden="true">1.</strong> Course Structure</a></li><li class="chapter-item expanded "><a href="resources.html"><strong aria-hidden="true">2.</strong> Resources</a></li><li class="chapter-item expanded "><a href="why-java.html"><strong aria-hidden="true">3.</strong> Why Java</a></li><li class="chapter-item expanded "><a href="basics-of-basics.html"><strong aria-hidden="true">4.</strong> Basics of Basics</a></li><li class="chapter-item expanded "><a href="oop.html"><strong aria-hidden="true">5.</strong> Object Oriented Programming</a></li><li class="chapter-item expanded "><a href="intro-to-java.html"><strong aria-hidden="true">6.</strong> Introduction To Java</a></li><li class="chapter-item expanded "><a href="installing-java.html"><strong aria-hidden="true">7.</strong> Installing Java</a></li><li class="chapter-item expanded "><a href="setting-up-vscode.html"><strong aria-hidden="true">8.</strong> Setting up Vscode and Extensions</a></li><li class="chapter-item expanded "><a href="cli-hello-world.html"><strong aria-hidden="true">9.</strong> Simple Hello World</a></li><li class="chapter-item expanded "><a href="project-oriented-approach.html"><strong aria-hidden="true">10.</strong> What Project Oriented Approach means</a></li><li class="chapter-item expanded "><a href="assignment-1.html"><strong aria-hidden="true">11.</strong> Assignment</a></li><li class="chapter-item expanded "><a href="github-setup.html"><strong aria-hidden="true">12.</strong> setting up github</a></li><li class="chapter-item expanded "><a href="tour-of-java.html"><strong aria-hidden="true">13.</strong> Tour of Java</a></li><li class="chapter-item expanded "><a href="more-into-basics.html"><strong aria-hidden="true">14.</strong> Refining Basics</a></li><li class="chapter-item expanded "><a href="array-list.html"><strong aria-hidden="true">15.</strong> Array and ArrayLists</a></li><li class="chapter-item expanded "><a href="strings.html"><strong aria-hidden="true">16.</strong> Strings</a></li><li class="chapter-item expanded "><a href="classes.html"><strong aria-hidden="true">17.</strong> Classes</a></li><li class="chapter-item expanded "><a href="objects-and-references.html"><strong aria-hidden="true">18.</strong> Object And References</a></li><li class="chapter-item expanded "><a href="types.html"><strong aria-hidden="true">19.</strong> Types</a></li><li class="chapter-item expanded "><a href="reading-files.html" class="active"><strong aria-hidden="true">20.</strong> Reading Files</a></li><li class="chapter-item expanded "><a href="seperation-of-concerns.html"><strong aria-hidden="true">21.</strong> Seperation of Concerns</a></li><li class="chapter-item expanded "><a href="testing.html"><strong aria-hidden="true">22.</strong> Testing</a></li></ol>            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                                                <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                                            </div>
+
+                    <h1 class="menu-title">Project Oriented Java</h1>
+
+                    <div class="right-buttons">
+                                                <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                                                                        
+                    </div>
+                </div>
+
+                                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="reading-files"><a class="header" href="#reading-files">Reading Files</a></h1>
+<p>Software often involves handling data in various forms. Applications like music players handle music files, image editors manage image files, and social media platforms handle user data stored in file-based databases. These tasks typically involve reading and manipulating data, which is ultimately stored in files.</p>
+<h2 id="reading-from-the-keyboard"><a class="header" href="#reading-from-the-keyboard">Reading From the Keyboard</a></h2>
+<p>We've used the <code>Scanner</code> class to read user input. The typical pattern involves reading input in a loop until a specific input ends the reading process.</p>
+<pre><code class="language-java">Scanner scanner = new Scanner(System.in);
+
+while (true) {
+    String line = scanner.nextLine();
+    if (line.equals(&quot;end&quot;)) {
+        break;
+    }
+    // Handle the input line
+}
+</code></pre>
+<p>To handle the input as integers, we convert the string input to integers.</p>
+<pre><code class="language-java">Scanner scanner = new Scanner(System.in);
+
+while (true) {
+    String row = scanner.nextLine();
+    if (row.equals(&quot;end&quot;)) {
+        break;
+    }
+    int number = Integer.valueOf(row);
+    System.out.println(number);
+}
+</code></pre>
+<h2 id="files-and-the-filesystem"><a class="header" href="#files-and-the-filesystem">Files and the Filesystem</a></h2>
+<p>Files are collections of data stored on a computer, and they can contain text, images, music, etc. The file format determines how the content is stored and which programs can read it. Browsing files is typically done through the operating system's file system.</p>
+<h2 id="reading-from-a-file"><a class="header" href="#reading-from-a-file">Reading From a File</a></h2>
+<p>To read a file using the <code>Scanner</code> class, we provide the file's path to the constructor. Java's <code>Paths.get</code> command is used to get the file path.</p>
+<pre><code class="language-java">import java.util.Scanner;
+import java.nio.file.Paths;
+
+try (Scanner scanner = new Scanner(Paths.get(&quot;file.txt&quot;))) {
+    while (scanner.hasNextLine()) {
+        String row = scanner.nextLine();
+        System.out.println(row);
+    }
+} catch (Exception e) {
+    System.out.println(&quot;Error: &quot; + e.getMessage());
+}
+</code></pre>
+<p>In this example, the file <code>file.txt</code> is read line by line, and each line is printed to the console.</p>
+<p>To add lines from a file to an <code>ArrayList</code>:</p>
+<pre><code class="language-java">ArrayList&lt;String&gt; lines = new ArrayList&lt;&gt;();
+
+try (Scanner scanner = new Scanner(Paths.get(&quot;file.txt&quot;))) {
+    while (scanner.hasNextLine()) {
+        lines.add(scanner.nextLine());
+    }
+} catch (Exception e) {
+    System.out.println(&quot;Error: &quot; + e.getMessage());
+}
+
+System.out.println(&quot;Total lines: &quot; + lines.size());
+</code></pre>
+<h2 id="handling-empty-lines"><a class="header" href="#handling-empty-lines">Handling Empty Lines</a></h2>
+<p>Sometimes, files contain empty lines that should be skipped.</p>
+<pre><code class="language-java">try (Scanner scanner = new Scanner(Paths.get(&quot;file.txt&quot;))) {
+    while (scanner.hasNextLine()) {
+        String line = scanner.nextLine();
+        if (line.isEmpty()) {
+            continue;
+        }
+        // Handle non-empty line
+    }
+} catch (Exception e) {
+    System.out.println(&quot;Error: &quot; + e.getMessage());
+}
+</code></pre>
+<h2 id="reading-data-in-a-specific-format"><a class="header" href="#reading-data-in-a-specific-format">Reading Data in a Specific Format</a></h2>
+<p>Data is often stored in files using specific formats, such as comma-separated values (CSV).</p>
+<h3 id="reading-csv-data-from-user-input"><a class="header" href="#reading-csv-data-from-user-input">Reading CSV Data from User Input</a></h3>
+<pre><code class="language-java">Scanner scanner = new Scanner(System.in);
+
+while (true) {
+    System.out.print(&quot;Enter name and age separated by a comma: &quot;);
+    String line = scanner.nextLine();
+    if (line.equals(&quot;&quot;)) {
+        break;
+    }
+
+    String[] parts = line.split(&quot;,&quot;);
+    String name = parts[0];
+    int age = Integer.valueOf(parts[1]);
+
+    System.out.println(&quot;Name: &quot; + name);
+    System.out.println(&quot;Age: &quot; + age);
+}
+</code></pre>
+<h3 id="reading-csv-data-from-a-file"><a class="header" href="#reading-csv-data-from-a-file">Reading CSV Data from a File</a></h3>
+<pre><code class="language-java">try (Scanner scanner = new Scanner(Paths.get(&quot;records.txt&quot;))) {
+    while (scanner.hasNextLine()) {
+        String line = scanner.nextLine();
+        String[] parts = line.split(&quot;,&quot;);
+        String name = parts[0];
+        int age = Integer.valueOf(parts[1]);
+
+        System.out.println(&quot;Name: &quot; + name);
+        System.out.println(&quot;Age: &quot; + age);
+    }
+} catch (Exception e) {
+    System.out.println(&quot;Error: &quot; + e.getMessage());
+}
+</code></pre>
+<h2 id="reading-objects-from-a-file"><a class="header" href="#reading-objects-from-a-file">Reading Objects From a File</a></h2>
+<p>Creating objects from data read from a file can be done similarly. Assume we have a <code>Person</code> class:</p>
+<pre><code class="language-java">public class Person {
+    private String name;
+    private int age;
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return this.name + &quot;, age &quot; + this.age + &quot; years&quot;;
+    }
+}
+</code></pre>
+<h3 id="reading-person-objects-from-a-file"><a class="header" href="#reading-person-objects-from-a-file">Reading <code>Person</code> Objects from a File</a></h3>
+<pre><code class="language-java">ArrayList&lt;Person&gt; people = new ArrayList&lt;&gt;();
+
+try (Scanner scanner = new Scanner(Paths.get(&quot;records.txt&quot;))) {
+    while (scanner.hasNextLine()) {
+        String line = scanner.nextLine();
+        String[] parts = line.split(&quot;,&quot;);
+        String name = parts[0];
+        int age = Integer.valueOf(parts[1]);
+
+        people.add(new Person(name, age));
+    }
+} catch (Exception e) {
+    System.out.println(&quot;Error: &quot; + e.getMessage());
+}
+
+System.out.println(&quot;Total amount of people read: &quot; + people.size());
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                                                    <a rel="prev" href="types.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+                                                    <a rel="next" href="seperation-of-concerns.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                                    <a rel="prev" href="types.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+                                    <a rel="next" href="seperation-of-concerns.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                            </nav>
+
+        </div>
+
+        
+        
+        
+                <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+        
+                <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+        
+    </body>
+</html>

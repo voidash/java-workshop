@@ -1,0 +1,425 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Array and ArrayLists - Project Oriented Java</title>
+                
+
+        <!-- Custom HTML head -->
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+                <link rel="icon" href="favicon.svg">
+                        <link rel="shortcut icon" href="favicon.png">
+                <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+                <link rel="stylesheet" href="css/print.css" media="print">
+        
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+                <link rel="stylesheet" href="fonts/fonts.css">
+        
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+            </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="course-structure.html"><strong aria-hidden="true">1.</strong> Course Structure</a></li><li class="chapter-item expanded "><a href="resources.html"><strong aria-hidden="true">2.</strong> Resources</a></li><li class="chapter-item expanded "><a href="why-java.html"><strong aria-hidden="true">3.</strong> Why Java</a></li><li class="chapter-item expanded "><a href="basics-of-basics.html"><strong aria-hidden="true">4.</strong> Basics of Basics</a></li><li class="chapter-item expanded "><a href="oop.html"><strong aria-hidden="true">5.</strong> Object Oriented Programming</a></li><li class="chapter-item expanded "><a href="intro-to-java.html"><strong aria-hidden="true">6.</strong> Introduction To Java</a></li><li class="chapter-item expanded "><a href="installing-java.html"><strong aria-hidden="true">7.</strong> Installing Java</a></li><li class="chapter-item expanded "><a href="setting-up-vscode.html"><strong aria-hidden="true">8.</strong> Setting up Vscode and Extensions</a></li><li class="chapter-item expanded "><a href="cli-hello-world.html"><strong aria-hidden="true">9.</strong> Simple Hello World</a></li><li class="chapter-item expanded "><a href="project-oriented-approach.html"><strong aria-hidden="true">10.</strong> What Project Oriented Approach means</a></li><li class="chapter-item expanded "><a href="assignment-1.html"><strong aria-hidden="true">11.</strong> Assignment</a></li><li class="chapter-item expanded "><a href="github-setup.html"><strong aria-hidden="true">12.</strong> setting up github</a></li><li class="chapter-item expanded "><a href="tour-of-java.html"><strong aria-hidden="true">13.</strong> Tour of Java</a></li><li class="chapter-item expanded "><a href="more-into-basics.html"><strong aria-hidden="true">14.</strong> Refining Basics</a></li><li class="chapter-item expanded "><a href="array-list.html" class="active"><strong aria-hidden="true">15.</strong> Array and ArrayLists</a></li><li class="chapter-item expanded "><a href="strings.html"><strong aria-hidden="true">16.</strong> Strings</a></li><li class="chapter-item expanded "><a href="classes.html"><strong aria-hidden="true">17.</strong> Classes</a></li><li class="chapter-item expanded "><a href="objects-and-references.html"><strong aria-hidden="true">18.</strong> Object And References</a></li><li class="chapter-item expanded "><a href="types.html"><strong aria-hidden="true">19.</strong> Types</a></li><li class="chapter-item expanded "><a href="reading-files.html"><strong aria-hidden="true">20.</strong> Reading Files</a></li><li class="chapter-item expanded "><a href="seperation-of-concerns.html"><strong aria-hidden="true">21.</strong> Seperation of Concerns</a></li><li class="chapter-item expanded "><a href="testing.html"><strong aria-hidden="true">22.</strong> Testing</a></li></ol>            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                                                <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                                            </div>
+
+                    <h1 class="menu-title">Project Oriented Java</h1>
+
+                    <div class="right-buttons">
+                                                <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                                                                        
+                    </div>
+                </div>
+
+                                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="array"><a class="header" href="#array">Array</a></h1>
+<p>We've gotten familiar with the ArrayList, which offers significant functionality for programmers, particularly for adding elements. The size of the ArrayList appears unlimited, but in reality, it allocates more space in memory as needed and copies the data to the new space.</p>
+<p>Despite its simplicity, sometimes we need to use the ancestor of the ArrayList, the Array. An Array has a fixed number of elements, referred to by indices. The size of an Array is determined upon creation and specifies the number of values it can hold.</p>
+<p>Creating an Array:</p>
+<ol>
+<li>Explicitly define the size:
+<pre><code class="language-java">int[] numbers = new int[3];
+String[] strings = new String[5];
+</code></pre>
+</li>
+</ol>
+<p>Assigning and Accessing Elements:</p>
+<ul>
+<li>Elements are accessed by their index:
+<pre><code class="language-java">int[] numbers = new int[3];
+numbers[0] = 2;
+numbers[2] = 5;
+
+System.out.println(numbers[0]);
+System.out.println(numbers[2]);
+</code></pre>
+</li>
+</ul>
+<p>The index ranges from 0 to length - 1. For example, an Array with 5 elements has indices 0 to 4.</p>
+<p>Iterating Over an Array:</p>
+<ul>
+<li>Use a while loop to iterate over each element:
+<pre><code class="language-java">int[] numbers = new int[4];
+numbers[0] = 42;
+numbers[1] = 13;
+numbers[2] = 12;
+numbers[3] = 7;
+
+System.out.println(&quot;The array has &quot; + numbers.length + &quot; elements.&quot;);
+
+int index = 0;
+while (index &lt; numbers.length) {
+    System.out.println(numbers[index]);
+    index++;
+}
+</code></pre>
+</li>
+</ul>
+<p>Handling Index Errors:</p>
+<ul>
+<li>Accessing an invalid index throws an ArrayIndexOutOfBoundsException. Ensure indices are within the valid range.</li>
+</ul>
+<p>Creating Arrays with a Block:</p>
+<ul>
+<li>Arrays can be initialized with values directly:
+<pre><code class="language-java">int[] numbers = {100, 1, 42};
+String[] arrayOfStrings = {&quot;Matti L.&quot;, &quot;Matti P.&quot;, &quot;Matti V.&quot;};
+double[] arrayOfFloatingpoints = {1.20, 3.14, 100.0, 0.6666666667};
+</code></pre>
+</li>
+</ul>
+<p>Arrays as Method Parameters:</p>
+<ul>
+<li>Arrays can be passed as parameters to methods. Changes to the array within the method persist after execution:
+<pre><code class="language-java">public static void listElements(int[] integerArray) {
+    for (int number : integerArray) {
+        System.out.print(number + &quot; &quot;);
+    }
+    System.out.println(&quot;&quot;);
+}
+
+int[] numbers = {1, 2, 3};
+listElements(numbers);
+</code></pre>
+</li>
+</ul>
+<hr />
+<h1 id="arraylists"><a class="header" href="#arraylists">ArrayLists</a></h1>
+<p>In programming, storing multiple values in separate variables is impractical:</p>
+<pre><code class="language-java">String word1;
+String word2;
+String word3;
+// ...
+String word10;
+</code></pre>
+<p>Java offers a tool called <code>ArrayList</code> for storing many values of the same type efficiently.</p>
+<h3 id="using-and-creating-lists"><a class="header" href="#using-and-creating-lists">Using and Creating Lists</a></h3>
+<p>To use <code>ArrayList</code>, first import it:</p>
+<pre><code class="language-java">import java.util.ArrayList;
+
+public class Program {
+    public static void main(String[] args) {
+        // Create a list
+        ArrayList&lt;String&gt; list = new ArrayList&lt;&gt;();
+    }
+}
+</code></pre>
+<p>The type of values stored is specified when creating the list:</p>
+<pre><code class="language-java">ArrayList&lt;String&gt; list = new ArrayList&lt;&gt;();
+</code></pre>
+<h3 id="defining-the-type-of-values"><a class="header" href="#defining-the-type-of-values">Defining the Type of Values</a></h3>
+<p>When defining an <code>ArrayList</code>, the type of values must be capitalized:</p>
+<pre><code class="language-java">ArrayList&lt;Integer&gt; list = new ArrayList&lt;&gt;();
+list.add(1);
+
+ArrayList&lt;Double&gt; list = new ArrayList&lt;&gt;();
+list.add(4.2);
+
+ArrayList&lt;Boolean&gt; list = new ArrayList&lt;&gt;();
+list.add(true);
+
+ArrayList&lt;String&gt; list = new ArrayList&lt;&gt;();
+list.add(&quot;String is a reference-type variable&quot;);
+</code></pre>
+<h3 id="adding-to-and-retrieving-values-from-a-list"><a class="header" href="#adding-to-and-retrieving-values-from-a-list">Adding to and Retrieving Values from a List</a></h3>
+<p>Add values with <code>add</code> and retrieve them with <code>get</code>:</p>
+<pre><code class="language-java">ArrayList&lt;String&gt; wordList = new ArrayList&lt;&gt;();
+
+wordList.add(&quot;First&quot;);
+wordList.add(&quot;Second&quot;);
+
+System.out.println(wordList.get(0)); // Output: First
+System.out.println(wordList.get(1)); // Output: Second
+</code></pre>
+<h3 id="handling-non-existent-indices"><a class="header" href="#handling-non-existent-indices">Handling Non-Existent Indices</a></h3>
+<p>Retrieving from a non-existent index results in an <code>IndexOutOfBoundsException</code>:</p>
+<pre><code class="language-java">ArrayList&lt;String&gt; wordList = new ArrayList&lt;&gt;();
+
+wordList.add(&quot;First&quot;);
+wordList.add(&quot;Second&quot;);
+
+System.out.println(wordList.get(2)); // Error: IndexOutOfBoundsException
+</code></pre>
+<h3 id="iterating-over-a-list"><a class="header" href="#iterating-over-a-list">Iterating Over a List</a></h3>
+<p>Use a loop to iterate over list elements. Using <code>size</code> gives the number of elements:</p>
+<pre><code class="language-java">ArrayList&lt;String&gt; teachers = new ArrayList&lt;&gt;();
+
+teachers.add(&quot;Simon&quot;);
+teachers.add(&quot;Samuel&quot;);
+teachers.add(&quot;Ann&quot;);
+teachers.add(&quot;Anna&quot;);
+
+for (int i = 0; i &lt; teachers.size(); i++) {
+    System.out.println(teachers.get(i));
+}
+</code></pre>
+<p>For a for-each loop:</p>
+<pre><code class="language-java">ArrayList&lt;String&gt; teachers = new ArrayList&lt;&gt;();
+
+teachers.add(&quot;Simon&quot;);
+teachers.add(&quot;Samuel&quot;);
+teachers.add(&quot;Ann&quot;);
+teachers.add(&quot;Anna&quot;);
+
+for (String teacher : teachers) {
+    System.out.println(teacher);
+}
+</code></pre>
+<h3 id="removing-values-from-a-list"><a class="header" href="#removing-values-from-a-list">Removing Values from a List</a></h3>
+<p>Remove by index or value:</p>
+<pre><code class="language-java">ArrayList&lt;String&gt; list = new ArrayList&lt;&gt;();
+
+list.add(&quot;First&quot;);
+list.add(&quot;Second&quot;);
+list.add(&quot;Third&quot;);
+
+list.remove(1); // Removes &quot;Second&quot;
+list.remove(&quot;First&quot;); // Removes &quot;First&quot;
+</code></pre>
+<h3 id="checking-for-existence-of-a-value"><a class="header" href="#checking-for-existence-of-a-value">Checking for Existence of a Value</a></h3>
+<p>Use <code>contains</code> to check if a value exists in the list:</p>
+<pre><code class="language-java">ArrayList&lt;String&gt; list = new ArrayList&lt;&gt;();
+
+list.add(&quot;First&quot;);
+list.add(&quot;Second&quot;);
+list.add(&quot;Third&quot;);
+
+boolean found = list.contains(&quot;Second&quot;); // true
+</code></pre>
+<h3 id="lists-as-method-parameters"><a class="header" href="#lists-as-method-parameters">Lists as Method Parameters</a></h3>
+<p>Lists can be passed as method parameters:</p>
+<pre><code class="language-java">public static void print(ArrayList&lt;String&gt; list) {
+    for (String value : list) {
+        System.out.println(value);
+    }
+}
+
+ArrayList&lt;String&gt; strings = new ArrayList&lt;&gt;();
+strings.add(&quot;First&quot;);
+strings.add(&quot;Second&quot;);
+strings.add(&quot;Third&quot;);
+
+print(strings);
+</code></pre>
+<h3 id="modifying-lists-in-methods"><a class="header" href="#modifying-lists-in-methods">Modifying Lists in Methods</a></h3>
+<p>Methods can modify lists passed to them:</p>
+<pre><code class="language-java">public static void removeFirst(ArrayList&lt;Integer&gt; numbers) {
+    if (numbers.size() &gt; 0) {
+        numbers.remove(0);
+    }
+}
+
+ArrayList&lt;Integer&gt; numbers = new ArrayList&lt;&gt;();
+numbers.add(3);
+numbers.add(2);
+numbers.add(6);
+numbers.add(-1);
+
+removeFirst(numbers); // Removes first element
+</code></pre>
+<h3 id="summary-of-list-methods"><a class="header" href="#summary-of-list-methods">Summary of List Methods</a></h3>
+<ul>
+<li><strong>Add a value</strong>: <code>list.add(&quot;value&quot;);</code></li>
+<li><strong>Get a value</strong>: <code>String value = list.get(0);</code></li>
+<li><strong>Remove by index</strong>: <code>list.remove(0);</code></li>
+<li><strong>Remove by value</strong>: <code>list.remove(&quot;value&quot;);</code></li>
+<li><strong>Check existence</strong>: <code>boolean found = list.contains(&quot;value&quot;);</code></li>
+<li><strong>List size</strong>: <code>int size = list.size();</code></li>
+</ul>
+<h3 id="example-usage"><a class="header" href="#example-usage">Example Usage</a></h3>
+<pre><code class="language-java">import java.util.ArrayList;
+
+public class ListExample {
+    public static void main(String[] args) {
+        ArrayList&lt;String&gt; list = new ArrayList&lt;&gt;();
+        list.add(&quot;hello world!&quot;);
+        
+        System.out.println(&quot;Size: &quot; + list.size()); // Size: 1
+        System.out.println(&quot;Value: &quot; + list.get(0)); // Value: hello world!
+        list.remove(&quot;hello world!&quot;);
+        System.out.println(&quot;Contains 'hello world!': &quot; + list.contains(&quot;hello world!&quot;)); // false
+    }
+}
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                                                    <a rel="prev" href="more-into-basics.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+                                                    <a rel="next" href="strings.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                                    <a rel="prev" href="more-into-basics.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+                                    <a rel="next" href="strings.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                            </nav>
+
+        </div>
+
+        
+        
+        
+                <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+        
+                <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+        
+    </body>
+</html>

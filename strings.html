@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Simple Hello World - Project Oriented Java</title>
+        <title>Strings - Project Oriented Java</title>
                 
 
         <!-- Custom HTML head -->
@@ -82,7 +82,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="course-structure.html"><strong aria-hidden="true">1.</strong> Course Structure</a></li><li class="chapter-item expanded "><a href="resources.html"><strong aria-hidden="true">2.</strong> Resources</a></li><li class="chapter-item expanded "><a href="why-java.html"><strong aria-hidden="true">3.</strong> Why Java</a></li><li class="chapter-item expanded "><a href="basics-of-basics.html"><strong aria-hidden="true">4.</strong> Basics of Basics</a></li><li class="chapter-item expanded "><a href="oop.html"><strong aria-hidden="true">5.</strong> Object Oriented Programming</a></li><li class="chapter-item expanded "><a href="intro-to-java.html"><strong aria-hidden="true">6.</strong> Introduction To Java</a></li><li class="chapter-item expanded "><a href="installing-java.html"><strong aria-hidden="true">7.</strong> Installing Java</a></li><li class="chapter-item expanded "><a href="setting-up-vscode.html"><strong aria-hidden="true">8.</strong> Setting up Vscode and Extensions</a></li><li class="chapter-item expanded "><a href="cli-hello-world.html" class="active"><strong aria-hidden="true">9.</strong> Simple Hello World</a></li><li class="chapter-item expanded "><a href="project-oriented-approach.html"><strong aria-hidden="true">10.</strong> What Project Oriented Approach means</a></li><li class="chapter-item expanded "><a href="assignment-1.html"><strong aria-hidden="true">11.</strong> Assignment</a></li><li class="chapter-item expanded "><a href="github-setup.html"><strong aria-hidden="true">12.</strong> setting up github</a></li><li class="chapter-item expanded "><a href="tour-of-java.html"><strong aria-hidden="true">13.</strong> Tour of Java</a></li><li class="chapter-item expanded "><a href="more-into-basics.html"><strong aria-hidden="true">14.</strong> Refining Basics</a></li><li class="chapter-item expanded "><a href="array-list.html"><strong aria-hidden="true">15.</strong> Array and ArrayLists</a></li><li class="chapter-item expanded "><a href="strings.html"><strong aria-hidden="true">16.</strong> Strings</a></li><li class="chapter-item expanded "><a href="classes.html"><strong aria-hidden="true">17.</strong> Classes</a></li><li class="chapter-item expanded "><a href="objects-and-references.html"><strong aria-hidden="true">18.</strong> Object And References</a></li><li class="chapter-item expanded "><a href="types.html"><strong aria-hidden="true">19.</strong> Types</a></li><li class="chapter-item expanded "><a href="reading-files.html"><strong aria-hidden="true">20.</strong> Reading Files</a></li><li class="chapter-item expanded "><a href="seperation-of-concerns.html"><strong aria-hidden="true">21.</strong> Seperation of Concerns</a></li><li class="chapter-item expanded "><a href="testing.html"><strong aria-hidden="true">22.</strong> Testing</a></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="course-structure.html"><strong aria-hidden="true">1.</strong> Course Structure</a></li><li class="chapter-item expanded "><a href="resources.html"><strong aria-hidden="true">2.</strong> Resources</a></li><li class="chapter-item expanded "><a href="why-java.html"><strong aria-hidden="true">3.</strong> Why Java</a></li><li class="chapter-item expanded "><a href="basics-of-basics.html"><strong aria-hidden="true">4.</strong> Basics of Basics</a></li><li class="chapter-item expanded "><a href="oop.html"><strong aria-hidden="true">5.</strong> Object Oriented Programming</a></li><li class="chapter-item expanded "><a href="intro-to-java.html"><strong aria-hidden="true">6.</strong> Introduction To Java</a></li><li class="chapter-item expanded "><a href="installing-java.html"><strong aria-hidden="true">7.</strong> Installing Java</a></li><li class="chapter-item expanded "><a href="setting-up-vscode.html"><strong aria-hidden="true">8.</strong> Setting up Vscode and Extensions</a></li><li class="chapter-item expanded "><a href="cli-hello-world.html"><strong aria-hidden="true">9.</strong> Simple Hello World</a></li><li class="chapter-item expanded "><a href="project-oriented-approach.html"><strong aria-hidden="true">10.</strong> What Project Oriented Approach means</a></li><li class="chapter-item expanded "><a href="assignment-1.html"><strong aria-hidden="true">11.</strong> Assignment</a></li><li class="chapter-item expanded "><a href="github-setup.html"><strong aria-hidden="true">12.</strong> setting up github</a></li><li class="chapter-item expanded "><a href="tour-of-java.html"><strong aria-hidden="true">13.</strong> Tour of Java</a></li><li class="chapter-item expanded "><a href="more-into-basics.html"><strong aria-hidden="true">14.</strong> Refining Basics</a></li><li class="chapter-item expanded "><a href="array-list.html"><strong aria-hidden="true">15.</strong> Array and ArrayLists</a></li><li class="chapter-item expanded "><a href="strings.html" class="active"><strong aria-hidden="true">16.</strong> Strings</a></li><li class="chapter-item expanded "><a href="classes.html"><strong aria-hidden="true">17.</strong> Classes</a></li><li class="chapter-item expanded "><a href="objects-and-references.html"><strong aria-hidden="true">18.</strong> Object And References</a></li><li class="chapter-item expanded "><a href="types.html"><strong aria-hidden="true">19.</strong> Types</a></li><li class="chapter-item expanded "><a href="reading-files.html"><strong aria-hidden="true">20.</strong> Reading Files</a></li><li class="chapter-item expanded "><a href="seperation-of-concerns.html"><strong aria-hidden="true">21.</strong> Seperation of Concerns</a></li><li class="chapter-item expanded "><a href="testing.html"><strong aria-hidden="true">22.</strong> Testing</a></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -143,101 +143,149 @@
 
                 <div id="content" class="content">
                     <main>
-                        <hr />
-<h1 id="manual-hello-world-in-java"><a class="header" href="#manual-hello-world-in-java">Manual Hello World in Java</a></h1>
-<h2 id="prerequisites"><a class="header" href="#prerequisites">Prerequisites</a></h2>
-<ul>
-<li>Java Development Kit (JDK) installed and configured in your PATH.</li>
-</ul>
-<p>After you have set the environment variables and when you type <code>java --version</code></p>
-<pre><code>[I] cdjk@voidashs-MacBook-Air ~/test-java&gt; java --version
-openjdk 21.0.2 2024-01-16
-OpenJDK Runtime Environment (build 21.0.2+13-58)
-OpenJDK 64-Bit Server VM (build 21.0.2+13-58, mixed mode, sharing)
+                        <h1 id="strings"><a class="header" href="#strings">Strings</a></h1>
+<h3 id="creating-and-printing-strings"><a class="header" href="#creating-and-printing-strings">Creating and Printing Strings</a></h3>
+<p>Creating a string variable and printing it:</p>
+<pre><code class="language-java">String magicWord = &quot;abracadabra&quot;;
+System.out.println(magicWord);
 </code></pre>
-<hr />
-<h3 id="step-1-open-visual-studio-code"><a class="header" href="#step-1-open-visual-studio-code">Step 1: Open Visual Studio Code</a></h3>
-<ol>
-<li>Launch Visual Studio Code.</li>
-</ol>
-<h3 id="step-2-create-a-new-java-file"><a class="header" href="#step-2-create-a-new-java-file">Step 2: Create a New Java File</a></h3>
-<ol>
-<li>Open VSCode.</li>
-<li>Click on <code>File &gt; New File</code> or press <code>Ctrl+N</code> (Windows/Linux) or <code>Cmd+N</code> (Mac).</li>
-<li>Save the file by clicking on <code>File &gt; Save</code> or press <code>Ctrl+S</code> (Windows/Linux) or <code>Cmd+S</code> (Mac).</li>
-<li>Name the file <code>HelloWorld.java</code> and save it in your desired directory.</li>
-</ol>
-<h3 id="step-3-write-your-java-code"><a class="header" href="#step-3-write-your-java-code">Step 3: Write Your Java Code</a></h3>
-<ol>
-<li>In <code>HelloWorld.java</code>, add the following code:</li>
-</ol>
-<pre><code class="language-java">public class HelloWorld {
-    public static void main(String[] args) {
-        System.out.println(&quot;Hello, World!&quot;);
-    }
+<h3 id="reading-and-printing-strings"><a class="header" href="#reading-and-printing-strings">Reading and Printing Strings</a></h3>
+<p>Reading a string using <code>Scanner</code> and printing it:</p>
+<pre><code class="language-java">Scanner reader = new Scanner(System.in);
+
+System.out.print(&quot;What's your name? &quot;);
+String name = reader.nextLine();
+
+System.out.println(name);
+</code></pre>
+<h3 id="concatenating-strings"><a class="header" href="#concatenating-strings">Concatenating Strings</a></h3>
+<p>Concatenating strings using the <code>+</code> operator:</p>
+<pre><code class="language-java">String greeting = &quot;Hi &quot;;
+String name = &quot;Lily&quot;;
+String goodbye = &quot; and see you later!&quot;;
+
+String phrase = greeting + name + goodbye;
+
+System.out.println(phrase);
+</code></pre>
+<h3 id="string-comparisons-and-equals"><a class="header" href="#string-comparisons-and-equals">String Comparisons and <code>equals</code></a></h3>
+<p>Comparing strings with <code>equals</code>:</p>
+<pre><code class="language-java">String text = &quot;course&quot;;
+
+if (text.equals(&quot;marzipan&quot;)) {
+    System.out.println(&quot;The text variable contains the text marzipan.&quot;);
+} else {
+    System.out.println(&quot;The text variable does not contain the text marzipan.&quot;);
 }
 </code></pre>
-<h3 id="step-4-save-the-file"><a class="header" href="#step-4-save-the-file">Step 4: Save the File</a></h3>
-<ol>
-<li>Save the file by pressing <code>Ctrl+S</code> (Windows/Linux) or <code>Cmd+S</code> (Mac).</li>
-</ol>
-<h3 id="step-5-open-integrated-terminal-in-vscode"><a class="header" href="#step-5-open-integrated-terminal-in-vscode">Step 5: Open Integrated Terminal in VSCode</a></h3>
-<ol>
-<li>Open the integrated terminal by clicking on <code>View &gt; Terminal</code> or pressing <code>Ctrl+`</code> (Windows/Linux/Mac).</li>
-</ol>
-<h3 id="step-6-navigate-to-the-directory"><a class="header" href="#step-6-navigate-to-the-directory">Step 6: Navigate to the Directory</a></h3>
-<ol>
-<li>Use the <code>cd</code> command to navigate to the directory where <code>HelloWorld.java</code> is saved. For example:</li>
-</ol>
-<pre><code class="language-sh">cd path/to/your/directory
+<p>Comparing two string variables:</p>
+<pre><code class="language-java">String text = &quot;course&quot;;
+String anotherText = &quot;horse&quot;;
+
+if (text.equals(anotherText)) {
+    System.out.println(&quot;The two texts are equal!&quot;);
+} else {
+    System.out.println(&quot;The two texts are not equal!&quot;);
+}
 </code></pre>
-<p>Replace <code>path/to/your/directory</code> with the actual path.</p>
-<h3 id="step-8-compile-the-java-program"><a class="header" href="#step-8-compile-the-java-program">Step 8: Compile the Java Program</a></h3>
-<ol>
-<li>In the terminal, compile the Java source file using the <code>javac</code> command:</li>
-</ol>
-<pre><code class="language-sh">javac HelloWorld.java
+<p>Using negation in string comparison:</p>
+<pre><code class="language-java">String text = &quot;pie&quot;;
+
+if (!text.equals(&quot;cake&quot;)) {
+    System.out.println(&quot;it wasn't!&quot;);
+} else {
+    System.out.println(&quot;it was!&quot;);
+}
 </code></pre>
-<p>This command compiles <code>HelloWorld.java</code> and produces a <code>HelloWorld.class</code> file, which contains the bytecode that can be executed by the Java Virtual Machine (JVM).</p>
-<h3 id="step-9-run-the-java-program"><a class="header" href="#step-9-run-the-java-program">Step 9: Run the Java Program</a></h3>
-<ol>
-<li>In the terminal, run the compiled Java program using the <code>java</code> command:</li>
-</ol>
-<pre><code class="language-sh">java HelloWorld
+<h3 id="splitting-a-string"><a class="header" href="#splitting-a-string">Splitting a String</a></h3>
+<p>Splitting a string into parts using <code>split</code>:</p>
+<pre><code class="language-java">String text = &quot;first second third fourth&quot;;
+String[] pieces = text.split(&quot; &quot;);
+System.out.println(pieces[0]);
+System.out.println(pieces[1]);
+System.out.println(pieces[2]);
+System.out.println(pieces[3]);
+
+for (int i = 0; i &lt; pieces.length; i++) {
+    System.out.println(pieces[i]);
+}
 </code></pre>
-<p>You should see the following output:</p>
-<pre><code class="language-plaintext">Hello, World!
+<h3 id="data-of-fixed-format"><a class="header" href="#data-of-fixed-format">Data of Fixed Format</a></h3>
+<p>Using <code>split</code> for fixed-format data (e.g., CSV):</p>
+<pre><code class="language-java">Scanner reader = new Scanner(System.in);
+
+while (true) {
+    String input = reader.nextLine();
+    if (input.equals(&quot;&quot;)) {
+        break;
+    }
+
+    String[] pieces = input.split(&quot;,&quot;);
+    System.out.println(&quot;Name: &quot; + pieces[0] + &quot;, age: &quot; + pieces[1]);
+}
 </code></pre>
-<hr />
-<h2 id="summary-of-commands"><a class="header" href="#summary-of-commands">Summary of Commands</a></h2>
-<ol>
-<li>
-<p><strong>Navigate to the directory</strong>:</p>
-<pre><code class="language-sh">cd path/to/your/directory
+<h3 id="extracting-characters-from-strings"><a class="header" href="#extracting-characters-from-strings">Extracting Characters from Strings</a></h3>
+<p>Getting a character at a specified index using <code>charAt</code>:</p>
+<pre><code class="language-java">String text = &quot;Hello world!&quot;;
+char character = text.charAt(0);
+System.out.println(character);
 </code></pre>
-</li>
-<li>
-<p><strong>Compile the Java source file</strong>:</p>
-<pre><code class="language-sh">javac HelloWorld.java
+<h3 id="using-numerical-data-in-strings"><a class="header" href="#using-numerical-data-in-strings">Using Numerical Data in Strings</a></h3>
+<p>Handling numerical data within strings:</p>
+<pre><code class="language-java">Scanner reader = new Scanner(System.in);
+int sum = 0;
+
+while (true) {
+    String input = reader.nextLine();
+    if (input.equals(&quot;&quot;)) {
+        break;
+    }
+
+    String[] parts = input.split(&quot;,&quot;);
+    sum = sum + Integer.valueOf(parts[1]);
+}
+
+System.out.println(&quot;Sum of the ages is &quot; + sum);
 </code></pre>
-</li>
-<li>
-<p><strong>Run the compiled Java program</strong>:</p>
-<pre><code class="language-sh">java HelloWorld
+<h3 id="calculating-averages"><a class="header" href="#calculating-averages">Calculating Averages</a></h3>
+<p>Calculating the average from numerical data in strings:</p>
+<pre><code class="language-java">Scanner reader = new Scanner(System.in);
+int sum = 0;
+int count = 0;
+
+while (true) {
+    String input = reader.nextLine();
+    if (input.equals(&quot;&quot;)) {
+        break;
+    }
+
+    String[] parts = input.split(&quot;,&quot;);
+    sum = sum + Integer.valueOf(parts[1]);
+    count = count + 1;
+}
+
+if (count &gt; 0) {
+    System.out.println(&quot;Age average: &quot; + (1.0 * sum / count));
+} else {
+    System.out.println(&quot;No input.&quot;);
+}
 </code></pre>
-</li>
-</ol>
-<hr />
+<h3 id="finding-length-of-a-string"><a class="header" href="#finding-length-of-a-string">Finding Length of a String</a></h3>
+<p>Getting the length of a string using <code>length</code>:</p>
+<pre><code class="language-java">String word = &quot;equisterian&quot;;
+int length = word.length();
+System.out.println(&quot;The length of the word &quot; + word + &quot; is &quot; + length);
+</code></pre>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                                                    <a rel="prev" href="setting-up-vscode.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                                    <a rel="prev" href="array-list.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
-                                                    <a rel="next" href="project-oriented-approach.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                                    <a rel="next" href="classes.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -247,11 +295,11 @@ OpenJDK 64-Bit Server VM (build 21.0.2+13-58, mixed mode, sharing)
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                                    <a rel="prev" href="setting-up-vscode.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                    <a rel="prev" href="array-list.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
-                                    <a rel="next" href="project-oriented-approach.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                    <a rel="next" href="classes.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                             </nav>

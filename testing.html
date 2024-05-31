@@ -1,0 +1,316 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Testing - Project Oriented Java</title>
+                
+
+        <!-- Custom HTML head -->
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+                <link rel="icon" href="favicon.svg">
+                        <link rel="shortcut icon" href="favicon.png">
+                <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+                <link rel="stylesheet" href="css/print.css" media="print">
+        
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+                <link rel="stylesheet" href="fonts/fonts.css">
+        
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+            </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="course-structure.html"><strong aria-hidden="true">1.</strong> Course Structure</a></li><li class="chapter-item expanded "><a href="resources.html"><strong aria-hidden="true">2.</strong> Resources</a></li><li class="chapter-item expanded "><a href="why-java.html"><strong aria-hidden="true">3.</strong> Why Java</a></li><li class="chapter-item expanded "><a href="basics-of-basics.html"><strong aria-hidden="true">4.</strong> Basics of Basics</a></li><li class="chapter-item expanded "><a href="oop.html"><strong aria-hidden="true">5.</strong> Object Oriented Programming</a></li><li class="chapter-item expanded "><a href="intro-to-java.html"><strong aria-hidden="true">6.</strong> Introduction To Java</a></li><li class="chapter-item expanded "><a href="installing-java.html"><strong aria-hidden="true">7.</strong> Installing Java</a></li><li class="chapter-item expanded "><a href="setting-up-vscode.html"><strong aria-hidden="true">8.</strong> Setting up Vscode and Extensions</a></li><li class="chapter-item expanded "><a href="cli-hello-world.html"><strong aria-hidden="true">9.</strong> Simple Hello World</a></li><li class="chapter-item expanded "><a href="project-oriented-approach.html"><strong aria-hidden="true">10.</strong> What Project Oriented Approach means</a></li><li class="chapter-item expanded "><a href="assignment-1.html"><strong aria-hidden="true">11.</strong> Assignment</a></li><li class="chapter-item expanded "><a href="github-setup.html"><strong aria-hidden="true">12.</strong> setting up github</a></li><li class="chapter-item expanded "><a href="tour-of-java.html"><strong aria-hidden="true">13.</strong> Tour of Java</a></li><li class="chapter-item expanded "><a href="more-into-basics.html"><strong aria-hidden="true">14.</strong> Refining Basics</a></li><li class="chapter-item expanded "><a href="array-list.html"><strong aria-hidden="true">15.</strong> Array and ArrayLists</a></li><li class="chapter-item expanded "><a href="strings.html"><strong aria-hidden="true">16.</strong> Strings</a></li><li class="chapter-item expanded "><a href="classes.html"><strong aria-hidden="true">17.</strong> Classes</a></li><li class="chapter-item expanded "><a href="objects-and-references.html"><strong aria-hidden="true">18.</strong> Object And References</a></li><li class="chapter-item expanded "><a href="types.html"><strong aria-hidden="true">19.</strong> Types</a></li><li class="chapter-item expanded "><a href="reading-files.html"><strong aria-hidden="true">20.</strong> Reading Files</a></li><li class="chapter-item expanded "><a href="seperation-of-concerns.html"><strong aria-hidden="true">21.</strong> Seperation of Concerns</a></li><li class="chapter-item expanded "><a href="testing.html" class="active"><strong aria-hidden="true">22.</strong> Testing</a></li></ol>            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                                                <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                                            </div>
+
+                    <h1 class="menu-title">Project Oriented Java</h1>
+
+                    <div class="right-buttons">
+                                                <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                                                                        
+                    </div>
+                </div>
+
+                                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="testing"><a class="header" href="#testing">Testing</a></h1>
+<p>Errors often occur in the programs we write. Some errors are minor and mostly cause inconvenience to users, while others can have serious consequences. Making mistakes is a natural part of learning to program, and it is important to investigate error messages to understand the errors made.</p>
+<h2 id="software-error-example"><a class="header" href="#software-error-example">Software Error Example</a></h2>
+<p>A report from MIT describes an incident caused by a serious software error. The bug resulted from the program expecting calculations in the International System of Units (meters, kilograms, etc.), while the programmer used the American Measurement System. This prevented the satellite navigation auto-correction system from working as intended, leading to the satellite's destruction.</p>
+<h2 id="stack-trace"><a class="header" href="#stack-trace">Stack Trace</a></h2>
+<p>When an error occurs in a program, it typically prints a stack trace, which is a list of method calls that led to the error. For example:</p>
+<pre><code>Exception in thread &quot;main&quot; ...
+    at Program.main(Program.java:15)
+</code></pre>
+<p>The type of error is stated at the beginning, and the line &quot;at Program.main(Program.java:15)&quot; indicates the error occurred at line 15 in the <code>Program.java</code> file.</p>
+<h2 id="checklist-for-troubleshooting"><a class="header" href="#checklist-for-troubleshooting">Checklist for Troubleshooting</a></h2>
+<ol>
+<li><strong>Indent your code properly and check for missing parentheses.</strong></li>
+<li><strong>Verify variable names are correctly used.</strong></li>
+<li><strong>Test the program with different inputs to identify problematic inputs.</strong></li>
+<li><strong>Add print statements to output variable values at various stages.</strong></li>
+<li><strong>Ensure all variables are initialized to avoid <code>NullPointerException</code>.</strong></li>
+<li><strong>Pay attention to the stack trace for exceptions to trace the error source.</strong></li>
+<li><strong>Learn to use the debugger for more efficient error finding.</strong></li>
+</ol>
+<h2 id="passing-test-input-to-scanner"><a class="header" href="#passing-test-input-to-scanner">Passing Test Input to <code>Scanner</code></a></h2>
+<p>Manual testing can be laborious. Automate input by passing a string to a <code>Scanner</code> object. Example:</p>
+<pre><code class="language-java">String input = &quot;one\n&quot; + &quot;two\n&quot;  +
+               &quot;three\n&quot; + &quot;four\n&quot; +
+               &quot;five\n&quot; + &quot;one\n&quot;  +
+               &quot;six\n&quot;;
+
+Scanner reader = new Scanner(input);
+
+ArrayList&lt;String&gt; read = new ArrayList&lt;&gt;();
+
+while (true) {
+    System.out.println(&quot;Enter an input: &quot;);
+    String line = reader.nextLine();
+    if (read.contains(line)) {
+        break;
+    }
+
+    read.add(line);
+}
+
+System.out.println(&quot;Thank you!&quot;);
+
+if (read.contains(&quot;six&quot;)) {
+    System.out.println(&quot;A value that should not have been added to the group was added to it.&quot;);
+}
+</code></pre>
+<p>Passing a string to the <code>Scanner</code> constructor replaces keyboard input, allowing automated testing.</p>
+<h2 id="unit-testing"><a class="header" href="#unit-testing">Unit Testing</a></h2>
+<p>Unit testing involves testing individual components of the source code, such as classes and methods, in isolation. This method helps in identifying if each class and method fulfills its responsibility.</p>
+<h3 id="example-calculator-class"><a class="header" href="#example-calculator-class">Example: Calculator Class</a></h3>
+<pre><code class="language-java">public class Calculator {
+    private int value;
+
+    public Calculator() {
+        this.value = 0;
+    }
+
+    public void add(int number) {
+        this.value = this.value + number;
+    }
+
+    public void subtract(int number) {
+        this.value = this.value - number;
+    }
+
+    public int getValue() {
+        return this.value;
+    }
+}
+</code></pre>
+<h3 id="writing-unit-tests"><a class="header" href="#writing-unit-tests">Writing Unit Tests</a></h3>
+<p>Create a test class under the Test-Packages folder, named <code>CalculatorTest</code>.</p>
+<pre><code class="language-java">import static org.junit.Assert.assertEquals;
+import org.junit.Test;
+
+public class CalculatorTest {
+
+    @Test
+    public void calculatorInitialValueZero() {
+        Calculator calculator = new Calculator();
+        assertEquals(0, calculator.getValue());
+    }
+}
+</code></pre>
+<p>Run tests to ensure the functionality works as expected. Add more tests for different functionalities.</p>
+<pre><code class="language-java">import static org.junit.Assert.assertEquals;
+import org.junit.Test;
+
+public class CalculatorTest {
+
+    @Test
+    public void calculatorInitialValueZero() {
+        Calculator calculator = new Calculator();
+        assertEquals(0, calculator.getValue());
+    }
+
+    @Test
+    public void valueFiveWhenFiveAdded() {
+        Calculator calculator = new Calculator();
+        calculator.add(5);
+        assertEquals(5, calculator.getValue());
+    }
+
+    @Test
+    public void valueMinusTwoWhenTwoSubtracted() {
+        Calculator calculator = new Calculator();
+        calculator.subtract(2);
+        assertEquals(-2, calculator.getValue());
+    }
+}
+</code></pre>
+<p>Running these tests helps identify and correct errors, such as in the <code>subtract</code> method.</p>
+<h2 id="test-driven-development-tdd"><a class="header" href="#test-driven-development-tdd">Test-Driven Development (TDD)</a></h2>
+<p>TDD is a software development process that involves writing tests before implementing functionality. The process involves:</p>
+<ol>
+<li><strong>Write a test</strong> for the desired functionality.</li>
+<li><strong>Run the test</strong> to check if it fails (it should, as the functionality isn't implemented yet).</li>
+<li><strong>Implement the functionality</strong> to pass the test.</li>
+<li><strong>Run the tests again</strong> to ensure they pass.</li>
+<li><strong>Refactor the code</strong> if necessary, while ensuring tests still pass.</li>
+</ol>
+<p>Repeat these steps until the program is complete.</p>
+<h2 id="more-about-software-testing"><a class="header" href="#more-about-software-testing">More About Software Testing</a></h2>
+<p>Unit testing is one aspect of software testing. Developers also perform integration tests to check the interoperability of components and interface tests to validate the application's user interface.</p>
+<p>These testing methods are covered in more advanced courses.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                                                    <a rel="prev" href="seperation-of-concerns.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+                        
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                                    <a rel="prev" href="seperation-of-concerns.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+                            </nav>
+
+        </div>
+
+        
+        
+        
+                <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+        
+                <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+        
+    </body>
+</html>

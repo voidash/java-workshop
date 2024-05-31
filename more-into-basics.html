@@ -1,0 +1,561 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Refining Basics - Project Oriented Java</title>
+                
+
+        <!-- Custom HTML head -->
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+                <link rel="icon" href="favicon.svg">
+                        <link rel="shortcut icon" href="favicon.png">
+                <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+                <link rel="stylesheet" href="css/print.css" media="print">
+        
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+                <link rel="stylesheet" href="fonts/fonts.css">
+        
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+            </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="course-structure.html"><strong aria-hidden="true">1.</strong> Course Structure</a></li><li class="chapter-item expanded "><a href="resources.html"><strong aria-hidden="true">2.</strong> Resources</a></li><li class="chapter-item expanded "><a href="why-java.html"><strong aria-hidden="true">3.</strong> Why Java</a></li><li class="chapter-item expanded "><a href="basics-of-basics.html"><strong aria-hidden="true">4.</strong> Basics of Basics</a></li><li class="chapter-item expanded "><a href="oop.html"><strong aria-hidden="true">5.</strong> Object Oriented Programming</a></li><li class="chapter-item expanded "><a href="intro-to-java.html"><strong aria-hidden="true">6.</strong> Introduction To Java</a></li><li class="chapter-item expanded "><a href="installing-java.html"><strong aria-hidden="true">7.</strong> Installing Java</a></li><li class="chapter-item expanded "><a href="setting-up-vscode.html"><strong aria-hidden="true">8.</strong> Setting up Vscode and Extensions</a></li><li class="chapter-item expanded "><a href="cli-hello-world.html"><strong aria-hidden="true">9.</strong> Simple Hello World</a></li><li class="chapter-item expanded "><a href="project-oriented-approach.html"><strong aria-hidden="true">10.</strong> What Project Oriented Approach means</a></li><li class="chapter-item expanded "><a href="assignment-1.html"><strong aria-hidden="true">11.</strong> Assignment</a></li><li class="chapter-item expanded "><a href="github-setup.html"><strong aria-hidden="true">12.</strong> setting up github</a></li><li class="chapter-item expanded "><a href="tour-of-java.html"><strong aria-hidden="true">13.</strong> Tour of Java</a></li><li class="chapter-item expanded "><a href="more-into-basics.html" class="active"><strong aria-hidden="true">14.</strong> Refining Basics</a></li><li class="chapter-item expanded "><a href="array-list.html"><strong aria-hidden="true">15.</strong> Array and ArrayLists</a></li><li class="chapter-item expanded "><a href="strings.html"><strong aria-hidden="true">16.</strong> Strings</a></li><li class="chapter-item expanded "><a href="classes.html"><strong aria-hidden="true">17.</strong> Classes</a></li><li class="chapter-item expanded "><a href="objects-and-references.html"><strong aria-hidden="true">18.</strong> Object And References</a></li><li class="chapter-item expanded "><a href="types.html"><strong aria-hidden="true">19.</strong> Types</a></li><li class="chapter-item expanded "><a href="reading-files.html"><strong aria-hidden="true">20.</strong> Reading Files</a></li><li class="chapter-item expanded "><a href="seperation-of-concerns.html"><strong aria-hidden="true">21.</strong> Seperation of Concerns</a></li><li class="chapter-item expanded "><a href="testing.html"><strong aria-hidden="true">22.</strong> Testing</a></li></ol>            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                                                <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                                            </div>
+
+                    <h1 class="menu-title">Project Oriented Java</h1>
+
+                    <div class="right-buttons">
+                                                <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                                                                        
+                    </div>
+                </div>
+
+                                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="common-recurring-problems"><a class="header" href="#common-recurring-problems">Common Recurring Problems</a></h1>
+<p>https://maplant.com/2020-04-25-Writing-a-Simple-Garbage-Collector-in-C.html</p>
+<h3 id="a-hrefhttpsmaplantcom2020-04-25-writing-a-simple-garbage-collector-in-chtmltaken-from-maplantcoma"><a class="header" href="#a-hrefhttpsmaplantcom2020-04-25-writing-a-simple-garbage-collector-in-chtmltaken-from-maplantcoma"><a href="https://maplant.com/2020-04-25-Writing-a-Simple-Garbage-Collector-in-C.html">Taken from maplant.com</a></a></h3>
+<p>From elementary school through half of high school, I played drums. Every Wednesday at around 4:30 pm I had a drum lesson from a teacher who was quite good.</p>
+<p>Whenever I was having trouble learning a new groove or beat or whatever, he would always give me the same diagnosis: I was trying to do everything at once. I looked at the sheet of music, and I simply tried to play with all my hands. But I couldn’t. And the reason why is because I didn’t know how to play the groove yet, and simply trying to play the groove wasn’t how I was going to learn.</p>
+<p>So my teacher would enlighten me as to how I could learn: don’t try playing everything at once. Learn to play the high-hat part with your right hand. Once you’ve got that down, learn to play the snare with your left. Do the same with the bass, the tom-toms, and whatever other parts there are. When you have all the individual parts down, slowly begin to add them together. Add them together in pairs, then in threes, and eventually you’ll be able to play the entire thing</p>
+<p>I never got good at drums, but I did take these lessons to heart in my programming. It’s really hard to just start to type out an entire program. The only algorithm you need to write code is divide and conquer. Write the function to allocate memory. Then, write the function to look through memory. Then, write the function that cleans up memory. Finally, add them all together.</p>
+<p>As soon as you get past this barrier as a programmer, nothing practical becomes “hard”. You may not understand an algorithm, but anyone can understand an algorithm with enough time, paper, and the right book. If a project seems daunting, break it up into its individual parts. You may not know how to write an interpreter, but you sure as hell can write a parser. Find out what else you need to add, and do it.</p>
+<h3 id="combining-multiple-logics"><a class="header" href="#combining-multiple-logics">Combining multiple logics</a></h3>
+<h3 id="reading-user-input"><a class="header" href="#reading-user-input">Reading User Input</a></h3>
+<p>The solution pattern for reading user input involves using the <code>Scanner</code> class. The <code>Scanner</code> is created in the main method, and the class is made available by importing <code>java.util.Scanner</code>.</p>
+<pre><code class="language-java">import java.util.Scanner;
+
+public class Program {
+    public static void main(String[] main) {
+        Scanner reader = new Scanner(System.in);
+
+        String text = reader.nextLine();
+        int number = Integer.valueOf(reader.nextLine());
+        double numberWithDecimals = Double.valueOf(reader.nextLine());
+        boolean trueOrFalse = Boolean.valueOf(reader.nextLine());
+    }
+}
+</code></pre>
+<h3 id="calculating"><a class="header" href="#calculating">Calculating</a></h3>
+<p>To solve problems involving calculations:</p>
+<ol>
+<li>Define and declare variables for inputs.</li>
+<li>Identify the operation needed and declare a variable for the result.</li>
+<li>Use the result for further actions (e.g., printing).</li>
+</ol>
+<p>Example of calculating the sum of two integers:</p>
+<pre><code class="language-java">int first = 1;
+int second = 2;
+
+int sum = first + second;
+
+System.out.println(&quot;The sum of &quot; + first + &quot; and &quot; + second + &quot; is &quot; + sum);
+</code></pre>
+<p>A combined example of reading input and calculating the product of two integers:</p>
+<pre><code class="language-java">import java.util.Scanner;
+
+public class Program {
+    public static void main(String[] main) {
+        Scanner reader = new Scanner(System.in);
+
+        int first = Integer.valueOf(reader.nextLine());
+        int second = Integer.valueOf(reader.nextLine());
+
+        int product = first * second;
+
+        System.out.println(&quot;The product of &quot; + first + &quot; and &quot; + second + &quot; is &quot; + product);
+    }
+}
+</code></pre>
+<h3 id="conditional-logic"><a class="header" href="#conditional-logic">Conditional Logic</a></h3>
+<p>Conditional statements are used to perform actions based on certain conditions. The basic structure involves using <code>if</code>, <code>else if</code>, and <code>else</code>.</p>
+<p>Example of a simple conditional statement:</p>
+<pre><code class="language-java">int value = 15;
+if (value &gt; 42) {
+    System.out.println(&quot;ok&quot;);
+} else {
+    System.out.println(&quot;not ok&quot;);
+}
+</code></pre>
+<p>Chaining multiple conditions:</p>
+<pre><code class="language-java">if (value &gt; 5) {
+    // functionality when value is greater than five
+} else if (value &lt; 0) {
+    // functionality when value is less than zero
+} else {
+    // functionality otherwise
+}
+</code></pre>
+<h3 id="combined-example-reading-calculating-and-conditional-logic"><a class="header" href="#combined-example-reading-calculating-and-conditional-logic">Combined Example: Reading, Calculating, and Conditional Logic</a></h3>
+<p>A program that reads two integers, calculates their sum, and prints a message based on the sum:</p>
+<pre><code class="language-java">import java.util.Scanner;
+
+public class Program {
+    public static void main(String[] main) {
+        Scanner reader = new Scanner(System.in);
+
+        int first = Integer.valueOf(reader.nextLine());
+        int second = Integer.valueOf(reader.nextLine());
+
+        int sum = first + second;
+
+        if (sum &gt; 100) {
+            System.out.println(&quot;too much&quot;);
+        } else if (sum &lt; 0) {
+            System.out.println(&quot;too little&quot;);
+        } else {
+            System.out.println(&quot;ok&quot;);
+        }
+    }
+}
+</code></pre>
+<h1 id="loops"><a class="header" href="#loops">Loops</a></h1>
+<p>Instead of writing repetitive code for tasks like reading multiple inputs, loops allow for more elegant and scalable solutions. For instance, consider a program that reads five numbers and calculates their sum:</p>
+<pre><code class="language-java">Scanner scanner = new Scanner(System.in);
+int sum = 0;
+
+System.out.println(&quot;Input a number: &quot;);
+sum += Integer.valueOf(scanner.nextLine());
+
+System.out.println(&quot;Input a number: &quot;);
+sum += Integer.valueOf(scanner.nextLine());
+
+System.out.println(&quot;Input a number: &quot;);
+sum += Integer.valueOf(scanner.nextLine());
+
+System.out.println(&quot;Input a number: &quot;);
+sum += Integer.valueOf(scanner.nextLine());
+
+System.out.println(&quot;Input a number: &quot;);
+sum += Integer.valueOf(scanner.nextLine());
+
+System.out.println(&quot;The sum of the numbers is &quot; + sum);
+</code></pre>
+<p>Using a loop simplifies this task:</p>
+<pre><code class="language-java">Scanner scanner = new Scanner(System.in);
+int numbersRead = 0;
+int sum = 0;
+
+while (true) {
+    if (numbersRead == 5) {
+        break;
+    }
+
+    System.out.println(&quot;Input number&quot;);
+    sum += Integer.valueOf(scanner.nextLine());
+    numbersRead++;
+}
+
+System.out.println(&quot;The sum of the numbers is &quot; + sum);
+</code></pre>
+<h3 id="loops-and-infinite-loops"><a class="header" href="#loops-and-infinite-loops">Loops and Infinite Loops</a></h3>
+<p>A loop consists of an expression that determines whether the code within the loop should be repeated and a block containing the source code to be repeated:</p>
+<pre><code class="language-java">while (expression) {
+    // Block of code
+}
+</code></pre>
+<p>Using <code>true</code> as the expression creates an infinite loop:</p>
+<pre><code class="language-java">while (true) {
+    System.out.println(&quot;I can program!&quot;);
+}
+</code></pre>
+<h3 id="ending-a-loop"><a class="header" href="#ending-a-loop">Ending a Loop</a></h3>
+<p>The <code>break</code> command exits a loop:</p>
+<pre><code class="language-java">int number = 1;
+
+while (true) {
+    System.out.println(number);
+    if (number &gt;= 5) {
+        break;
+    }
+    number++;
+}
+
+System.out.println(&quot;Ready!&quot;);
+</code></pre>
+<h3 id="user-input-and-loops"><a class="header" href="#user-input-and-loops">User Input and Loops</a></h3>
+<p>Programs can ask users for input within a loop, using <code>break</code> to exit under certain conditions:</p>
+<pre><code class="language-java">Scanner scanner = new Scanner(System.in);
+
+while (true) {
+    System.out.println(&quot;Exit? (y exits)&quot;);
+    String input = scanner.nextLine();
+    if (input.equals(&quot;y&quot;)) {
+        break;
+    }
+    System.out.println(&quot;Ok! Let's carry on!&quot;);
+}
+
+System.out.println(&quot;Ready!&quot;);
+</code></pre>
+<h3 id="example-reading-numbers-until-zero"><a class="header" href="#example-reading-numbers-until-zero">Example: Reading Numbers Until Zero</a></h3>
+<pre><code class="language-java">Scanner scanner = new Scanner(System.in);
+
+while (true) {
+    System.out.println(&quot;Input a number, 0 to quit&quot;);
+    int command = Integer.valueOf(scanner.nextLine());
+    if (command == 0) {
+        break;
+    }
+    System.out.println(&quot;You input &quot; + command);
+}
+
+System.out.println(&quot;Done, thank you!&quot;);
+</code></pre>
+<h3 id="using-continue-to-return-to-the-start-of-a-loop"><a class="header" href="#using-continue-to-return-to-the-start-of-a-loop">Using <code>continue</code> to Return to the Start of a Loop</a></h3>
+<pre><code class="language-java">Scanner scanner = new Scanner(System.in);
+
+while (true) {
+    System.out.println(&quot;Insert positive integers&quot;);
+    int number = Integer.valueOf(scanner.nextLine());
+
+    if (number &lt;= 0) {
+        System.out.println(&quot;Unfit number! Try again.&quot;);
+        continue;
+    }
+
+    System.out.println(&quot;Your input was &quot; + number);
+}
+</code></pre>
+<h3 id="combining-if-statements"><a class="header" href="#combining-if-statements">Combining <code>if</code> Statements</a></h3>
+<p>Combining conditions can improve clarity:</p>
+<pre><code class="language-java">Scanner scanner = new Scanner(System.in);
+
+while (true) {
+    System.out.println(&quot;Input a number&quot;);
+    int number = Integer.valueOf(scanner.nextLine());
+
+    if (number &lt; 0) {
+        System.out.println(&quot;Unfit number&quot;);
+    } else if (number == 0) {
+        break;
+    } else {
+        System.out.println(number * number);
+    }
+}
+</code></pre>
+<h3 id="calculation-with-loops"><a class="header" href="#calculation-with-loops">Calculation with Loops</a></h3>
+<p>For calculations that need to track multiple user inputs, variables must be defined outside the loop:</p>
+<pre><code class="language-java">Scanner scanner = new Scanner(System.in);
+int ones = 0;
+
+while (true) {
+    System.out.println(&quot;Give a number (end with 0): &quot;);
+    int number = Integer.valueOf(scanner.nextLine());
+
+    if (number == 0) {
+        break;
+    }
+
+    if (number == 1) {
+        ones++;
+    }
+}
+
+System.out.println(&quot;The total of ones: &quot; + ones);
+</code></pre>
+<h3 id="example-counting-positive-and-negative-numbers"><a class="header" href="#example-counting-positive-and-negative-numbers">Example: Counting Positive and Negative Numbers</a></h3>
+<pre><code class="language-java">Scanner reader = new Scanner(System.in);
+int numberOfPositives = 0;
+int numberOfNegatives = 0;
+
+while (true) {
+    System.out.println(&quot;Give a number (0 to stop): &quot;);
+    int numberFromUser = Integer.valueOf(reader.nextLine());
+
+    if (numberFromUser == 0) {
+        break;
+    }
+
+    if (numberFromUser &gt; 0) {
+        numberOfPositives++;
+    } else {
+        numberOfNegatives++;
+    }
+}
+
+System.out.println(&quot;Positive numbers: &quot; + numberOfPositives);
+System.out.println(&quot;Negative numbers: &quot; + numberOfNegatives);
+
+if (numberOfPositives + numberOfNegatives &gt; 0) {
+    double percentageOfPositives = 100.0 * numberOfPositives / (numberOfPositives + numberOfNegatives);
+    System.out.println(&quot;Percentage of positive numbers: &quot; + percentageOfPositives + &quot;%&quot;);
+}
+</code></pre>
+<h1 id="discovering-errors"><a class="header" href="#discovering-errors">Discovering Errors</a></h1>
+<h2 id="a-programmer-blind-to-their-own-code"><a class="header" href="#a-programmer-blind-to-their-own-code">A Programmer Blind to Their Own Code</a></h2>
+<h3 id="perceptual-blindness-in-programming"><a class="header" href="#perceptual-blindness-in-programming">Perceptual Blindness in Programming</a></h3>
+<p>Perceptual blindness occurs when focusing on a specific task causes relevant information to be filtered out. This can happen when a programmer concentrates on one part of the code, neglecting other important parts. For example, while inspecting a program's output, a programmer might focus on print statements and overlook errors in the logic.</p>
+<h3 id="example-of-perceptual-blindness"><a class="header" href="#example-of-perceptual-blindness">Example of Perceptual Blindness</a></h3>
+<p>Consider the following program used to calculate the average of user-inputted values. It contains an error, and the loop is often the first target when searching for it:</p>
+<pre><code class="language-java">Scanner scanner = new Scanner(System.in);
+int values = 0;
+int sum = 0;
+
+while (true) {
+    System.out.println(&quot;Provide a value, a negative value ends the program&quot;);
+    int value = Integer.valueOf(scanner.nextLine());
+    if (value &lt; 0) {
+        break;
+    }
+
+    values = values + 1;
+    sum = sum + value;
+}
+
+if (sum == 0) {
+    System.out.println(&quot;The average of the values could not be calculated.&quot;);
+} else {
+    System.out.println(&quot;Average of values: &quot; + (1.0 * sum / values));
+}
+</code></pre>
+<h3 id="reducing-perceptual-blindness"><a class="header" href="#reducing-perceptual-blindness">Reducing Perceptual Blindness</a></h3>
+<ol>
+<li><strong>Taking Breaks</strong>: Start early to allow time for breaks.</li>
+<li><strong>Code Comments</strong>: Explain how the code works to oneself.</li>
+<li><strong>Proper Naming</strong>: Use descriptive names for variables, methods, and classes.</li>
+<li><strong>Debugging Prints</strong>: Follow the program's flow and variable values.</li>
+</ol>
+<h3 id="commenting-the-source-code"><a class="header" href="#commenting-the-source-code">Commenting the Source Code</a></h3>
+<p>Comments help explain how the code works. Here's an example:</p>
+<pre><code class="language-java">/*
+ Prints the numbers from ten to one.
+Each number is printed on its own line.
+*/
+
+int value = 10;
+
+while (value &gt; 0) {
+    System.out.println(value);
+    value = value - 1;
+}
+</code></pre>
+<p>A more practical approach is to write self-documenting code with meaningful names:</p>
+<pre><code class="language-java">public static void printValuesFromTenToOne() {
+    int value = 10;
+    while (value &gt; 0) {
+        System.out.println(value);
+        value = value - 1;
+    }
+}
+
+public static void printValuesFromLargestToSmallest(int start, int end) {
+    while (start &gt;= end) {
+        System.out.println(start);
+        start = start - 1;
+    }
+}
+</code></pre>
+<h3 id="searching-for-errors-with-print-debugging"><a class="header" href="#searching-for-errors-with-print-debugging">Searching for Errors with Print Debugging</a></h3>
+<p>Print debugging involves adding print statements to follow the program's execution. Here's the previous example with print-debug statements:</p>
+<pre><code class="language-java">Scanner scanner = new Scanner(System.in);
+int values = 0;
+int sum = 0;
+
+while (true) {
+    System.out.println(&quot;-- values: &quot; + values + &quot;, sum: &quot; + sum);
+
+    System.out.println(&quot;Provide a value, a negative value ends the program&quot;);
+    int value = Integer.valueOf(scanner.nextLine());
+    if (value &lt; 0) {
+        System.out.println(&quot;-- value is negative, exiting loop&quot;);
+        break;
+    }
+
+    values = values + 1;
+    sum = sum + value;
+}
+
+System.out.println(&quot;-- loop exited&quot;);
+System.out.println(&quot;-- values: &quot; + values + &quot;, sum: &quot; + sum);
+
+if (sum == 0) {
+    System.out.println(&quot;The average of the values could not be calculated.&quot;);
+} else {
+    System.out.println(&quot;Average of values: &quot; + (1.0 * sum / values));
+}
+</code></pre>
+<h3 id="testing-corner-cases"><a class="header" href="#testing-corner-cases">Testing Corner Cases</a></h3>
+<p>When testing, consider corner cases, such as when the user does not enter any acceptable value, or enters zeros or very large values. This helps in identifying hidden errors.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                                                    <a rel="prev" href="tour-of-java.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+                                                    <a rel="next" href="array-list.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                                    <a rel="prev" href="tour-of-java.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+                                    <a rel="next" href="array-list.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                            </nav>
+
+        </div>
+
+        
+        
+        
+                <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+        
+                <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+        
+    </body>
+</html>
