@@ -11,7 +11,14 @@ package org.javaworkshop.day1;
 public class Day1 {
 
     public int add(int a, int b)  {
-        return a + b;
+        return a;
+    }
+
+    public String fizzbuzz(int number) {
+        String a = "hello";
+        System.out.println(a);
+        a = "Test";
+        return a;
     }
 
     public static void main(String[] args) {

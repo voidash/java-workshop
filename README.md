@@ -6,5 +6,4 @@ Official Repo for [thapa-ashish.com.np/java-workshop/](https://thapa-ashish.com.
 
 Here you will find the workshop related code for each day, with assignments too.
 
-
-
+Join the official Telegram Link [https://t.me/javaworkshop_101](https://t.me/javaworkshop_101)

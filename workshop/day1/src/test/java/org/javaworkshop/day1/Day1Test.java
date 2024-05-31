@@ -12,4 +12,10 @@ public class Day1Test {
 		assertEquals(d.add(1, 2), 3);
 	}
 
+	@Test
+	public void testFizzBuzz() {
+		Day1 d = new Day1();
+		assertEquals(d.fizzbuzz(15),"FizzBuzz");
+	}
+
 }
