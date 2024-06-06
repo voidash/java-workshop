@@ -7,7 +7,7 @@ public class Day1Test {
 
 
 	@Test
-	public void test() {
+	public void addTest() {
 		Day1 d = new Day1();
 		assertEquals(d.add(1, 2), 3);
 	}
